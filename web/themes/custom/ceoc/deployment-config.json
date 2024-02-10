@@ -1,0 +1,9 @@
+{
+    "type": "sftp",
+    "host": "appserver.dev.3b1ba365-87ba-4cca-a941-46280173b540.drush.in",
+    "username": "dev.3b1ba365-87ba-4cca-a941-46280173b540",
+    "password": "pArmikaPAN1999!",
+    "port": 2222,
+    "remotePath": "/code/themes/ceoc",
+    "uploadOnSave": false
+}

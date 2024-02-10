@@ -1,0 +1,28 @@
+/* fold into overrides after call */
+.recipe-outer {
+	@extend .row;
+	.recipe-details {
+		@extend .col-sm-6;
+	}
+	.recipe-steps {
+		@extend .col-sm-6;
+	}
+}
+
+.page-node-type-story {
+	.field--name-body, .story-element {
+		@extend .container;
+	}
+	.col-sm-12.img-1 {
+	    width: 100%;
+	    padding: 0;
+	    img {
+	    	@extend .img-fluid;
+	    }
+	}
+	.img-1, .img-2, .img-3, .img-4 {
+	    img {
+	    	@extend .img-fluid;
+	    }
+	}
+}

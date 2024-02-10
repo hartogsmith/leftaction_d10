@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+
+  1. We use menu_name (see above) to create a CSS class name from it.
+  See https://www.drupal.org/node/2649076
+#}
+{{ menus.menu_links(items, attributes, 0, menu_name) }} {# 1. #}
+
+{% macro menu_links(items, attributes, menu_level, menu_name) %} {# 1. #}
+  {% import _self as menus %}
+  {# 1. #}
+
+  {% if items %}
+    {% if menu_level == 0 %}
+      <div class="meta nav">
+    {% endif %}
+    {% for item in items %}
+      {%
+        set link_classes = [
+          'btn btn-primary btn-' ~ item.title|clean_class,
+        ]
+      %}
+        <a {{ item.attributes.addClass(link_classes) }} href="{{ item.url }}"><span>{{ item.title }}</span></a>
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }} {# 1. #}
+        {% endif %}
+    {% endfor %}
+    </div>
+  {% endif %}
+  
+{% endmacro %}

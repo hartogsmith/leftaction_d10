@@ -1,0 +1,55 @@
+name = Left Action 20
+description = A Bootstrap 3 theme for Drupal 7.
+core = 7.x
+
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+regions[navigation]			= 'Navigation'
+;regions[extra_nav]			= 'Extra Navigation'
+regions[open_nav_left]		= 'Open Nav Left'
+regions[open_nav_right]		= 'Open Nav Right'
+regions[highlighted]		= 'Highlighted'
+regions[help]				= 'Help'
+regions[main_jumbotron]		= 'Main Jumbotron'
+regions[home_block_1]		= 'Home Block 1'
+regions[home_block_2]		= 'Home Block 2'
+regions[home_block_3]		= 'Home Block 3'
+regions[home_block_4]		= 'Home Block 4'
+regions[home_block_5]		= 'Home Block 5'
+regions[home_block_6]		= 'Home Block 6'
+regions[content]			= 'Content'
+regions[sidebar_first]		= 'Sidebar'
+regions[footer_signup]	= 'Footer Signup'
+regions[footer_upper_left]	= 'Footer Upper Left'
+regions[footer_upper_right]	= 'Footer Upper Right'
+regions[footer_lower_left]	= 'Footer Lower Left'
+regions[footer_lower_right]	= 'Footer Lower Right'
+regions[admin_left]			= 'Admin Left'
+regions[admin_right]		= 'Admin Right'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Settings
+;;;;;;;;;;;;;;;;;;;;;
+;settings[typekit] = 1
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = css/style.css
+stylesheets[screen, projection][] = css/animate.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+scripts[] = 'js/bootstrap.min.js'
+scripts[] = 'js/jquery.cycle2.min.js'
+scripts[] = 'js/jquery.validate.min.js'
+scripts[] = 'js/js.cookie.js'
+scripts[] = 'js/load.js'
+scripts[] = 'js/wow.min.js'
+scripts[] = 'js/wow_load.js'

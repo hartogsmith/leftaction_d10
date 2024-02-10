@@ -1,0 +1,48 @@
+core_version_requirement: ^9 || ^10
+base theme: classy
+type: theme
+
+name: 'ceoc'
+description: 'Drupal Bootstrap theme by Liberal Art.'
+#package: 'Bootstrap'
+
+regions:
+  tracking_header: 'Tracking (Header)'
+  navigation_left: 'Navigation Left'
+  navigation_right: 'Navigation Right'
+  navigation_collapsible: 'Navigation (Collapsible, Left)'
+  navigation_collapsible_right: 'Navigation (Collapsible, Right)'
+  extra_nav: 'Extra Navigation'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  hero: 'Hero'
+  home_jumbotron: 'Home Jumbotron'
+  home_block_1: 'Home Block 1'
+  home_block_2: 'Home Block 2'
+  home_block_3: 'Home Block 3'
+  home_block_4: 'Home Block 4'
+  home_block_5: 'Home Block 5'
+  home_block_6: 'Home Block 6'
+  interior_jumbotron: 'Interior Jumbotron'
+  header: 'Header'
+  #section_bar: 'Section Bar'
+  content: 'Content'
+  after_content: 'After Content'
+  node_block: 'Node Block'
+  #sidebar_first: 'Primary'
+  #sidebar_second: 'Secondary'
+  footer_action: 'Footer Action'
+  footer_top_center: 'Footer Top Center'
+  footer_upper_left: 'Footer Upper Left'
+  footer_upper_right: 'Footer Upper Right'
+  footer_center_center: 'Footer Center Center'
+  footer_lower_left: 'Footer Lower Left'
+  footer_lower_right: 'Footer Lower Right'
+  footer_bottom_center: 'Footer Bottom Center'
+  disclaimer: 'Footer Bottom Disclaimer'
+  tracking_footer: 'Tracking (Footer)'
+
+libraries:
+  - 'ceoc/global-styling'
+  - 'ceoc/global-scripts'
+  - 'ceoc/remote-custom'

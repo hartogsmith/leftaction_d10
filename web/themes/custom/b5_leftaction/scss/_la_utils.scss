@@ -1,0 +1,369 @@
+/* Sass Document */
+/* MIXINS */
+// Image Edges 
+@mixin edgetop($image, $img-height: 5.5vw ) { 
+    &:before {
+      content: "";
+      display: block; 
+      width: 100%; 
+      height: $img-height; 
+      position: absolute; 
+      top: -1px; 
+      left: 0; 
+      right: 0; 
+      z-index: 10; 
+      background: transparent url($image) no-repeat 0 0 ; 
+      background-size: 100% $img-height;  
+    }
+  }
+  @mixin edgebottom($image, $img-height: 5.5vw ) {
+    &:after {
+      content: "";
+      display: block; 
+      width: 100%; 
+      height: $img-height; 
+      position: absolute; 
+      bottom: -1px; 
+      left: 0; 
+      right: 0; 
+      z-index: 10; 
+      background: transparent url($image) no-repeat 0 0 ; 
+      background-size: 100% $img-height;  
+    }
+  }
+  @mixin edgesmarty($image, $where, $img-height: 5.5vwm, $img-width: 'auto', $top: 'auto', $bottom: 'auto', $repeat: 'no-repeat' ) { 
+    @if $where == "before" {
+      &:before {
+        content: "";
+        display: block; 
+        width: 100%; 
+        height: $img-height; 
+        position: absolute; 
+        top: $top; 
+        bottom: $bottom;
+        left: 0; 
+        right: 0; 
+        z-index: 10; 
+        background: transparent url($image) $repeat 0 0; 
+        background-size: $img-width $img-height;  
+      }
+    } @else if $where == "after" {
+      &:after {
+        content: "";
+        display: block; 
+        width: 100%; 
+        height: $img-height; 
+        position: absolute; 
+        top: $top; 
+        bottom: $bottom;
+        left: 0; 
+        right: 0; 
+        z-index: 10; 
+        background: transparent url($image) $repeat 0 0; 
+        background-size: $img-width $img-height;  
+      }
+    }
+  }
+  // Gradient Mixin 
+  @mixin gradient($from-color, $to-color) {
+    background-color: mix($from-color, $to-color); /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color, $to-color); 
+    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+    background-image:      -o-linear-gradient(top, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
+  }
+  
+  // nested row fix
+  .row .row {
+    margin-left: $grid-gutter-width / -2 !important;  
+    margin-right: $grid-gutter-width / -2 !important;  
+  }
+  
+  /* INVERSE TEXT */
+  .text-inverse, .text-reverse  {
+    div,
+    span,
+    h1, 
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    li,
+    a {
+      border-color: $white;
+      color: $white ;
+      a, &.active {
+        color: $white ;
+        // text-decoration: underline;
+        border-color: $white;
+        &:hover {
+          color: lighten($brand-secondary, 20%);
+        }
+      }
+    }
+    h1, 
+    h2,
+    h3,
+    h4,
+    h5,
+    // a.btn,
+    p,
+    li { 
+      -webkit-font-smoothing: antialiased; // keeps inversed fonts from jumping up a weight 
+     } 
+    //.btn {
+    //  border-color: $t;
+    //  background-color: $white; 
+    //  color: $brand-primary;
+    //}
+    //.form-control {
+    //  background-color: fade($gray-dark, 5%);
+    // border: 1px solid $white;
+    //  color: $white;
+    //}
+    input {
+      background-color: fade($gray-dark, 5%);
+      border: 1px solid $white;
+      color: $white;
+    }
+    .webform-submit,
+    input[type="submit"] {
+      //color: $white;
+      //font-size: 1.25em; 
+      background-color: lighten($brand-secondary, 20%);
+      transition: background-color .5s ease;
+      border-color: $white;
+      padding-top: 0;
+      padding-bottom: 0;
+      &:hover {
+        background-color: lighten($brand-secondary, 50%);
+      }
+    }
+    // Placeholder Text
+    ::-webkit-input-placeholder {
+      color: $white !important;
+    }
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: $white !important;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $white !important;
+    }
+    :-ms-input-placeholder {
+      color: $white !important;
+    }
+  }
+  .text-shadow-bump {
+    text-shadow: 0 2px 12px transparentize($gray-darker, .33); 
+  }
+  .text-shadow-bump-more {
+    text-shadow: 0 2px 12px transparentize($gray-darker, .1); 
+  }
+  
+  /* Utility Classes */
+  
+  .pin-bottom {
+      position: absolute; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+  }
+  
+  // bullet-free lists
+  .no-bull {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ul {
+      //repeated because sometimes we have to add the class to the ul, sometimes to its container
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  // img helpers
+  img.pull-right {
+    margin-left: $line-height-base;  
+    margin-bottom: $line-height-base / 2 ;
+  }
+  img.pull-left {
+    margin-right: $line-height-base;  
+    margin-bottom: $line-height-base / 2 ;
+  }
+  
+  /* TEXT ALIGNMENT */
+  .text-right {
+      text-align: right;
+  }
+  .text-left {
+      text-align: left;
+  }
+  
+  
+  // responsive alignment
+  @include media-breakpoint-down(sm) {
+    .text-xs-left {
+      text-align: left;
+    }
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-xs-center {
+      text-align: center;
+    }
+    .text-xs-justify {
+      text-align: justify;
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+    .text-sm-left {
+      text-align: left;
+    }
+    .text-sm-right {
+      text-align: right;
+    }
+    .text-sm-center {
+      text-align: center;
+    }
+    .text-sm-justify {
+      text-align: justify;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    .text-md-left {
+      text-align: left;
+    }
+    .text-md-right {
+      text-align: right;
+    }
+    .text-md-center {
+      text-align: center;
+    }
+    .text-md-justify {
+      text-align: justify;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    .text-lg-left {
+      text-align: left;
+    }
+    .text-lg-right {
+      text-align: right;
+    }
+    .text-lg-center {
+      text-align: center;
+    }
+    .text-lg-justify {
+      text-align: justify;
+    }
+  }
+  
+  .padtop {
+    padding-top: $padding-base-vertical;
+  }
+  .padtop-more {
+    padding-top: $padding-large-vertical;
+  }
+  .padtop-most {
+    padding-top: $padding-large-vertical * 2;
+  }
+  .padbottom {
+    padding-bottom: $padding-base-vertical;
+  }
+  .padbottom-more {
+    padding-bottom: $padding-large-vertical;
+  }
+  .padbottom-most {
+    padding-bottom: $padding-large-vertical * 2;
+  }
+  .nopad-left {
+    padding-left: 0;
+  }
+  .nopad-right {
+    padding-right: 0;
+  }
+  .nopad-sides {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .margin-top {
+    margin-top:  $padding-base-vertical; 
+  }
+  .flush-top {
+    margin-top: 0; 
+  }
+  .flush-bottom {
+    margin-bottom: 0; 
+  }
+  
+  
+  // nested columns fix - width limiting overrides row > row fix // fixed in BS4
+  .row .row,
+  .row .row .row {
+    margin-left: ($grid-gutter-width / -2) !important;
+    margin-right: ($grid-gutter-width / -2) !important;
+  }
+  
+  .bg-info {
+    background-color: $gray-lighter !important;
+  }
+  
+  /*.eyebrow { NOT GENERAL ENOUGH FOR UTILS
+    padding: 5px 10px 5px;
+    width: 100%;
+    margin: 0 !important;
+    background-color: fade($brand-primary, 50%);
+    color: $white;
+    font-size: .9em;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }*/
+  .nobull {
+    list-style: none;
+    padding-left: 0;
+    li {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+  
+  // Rotate mixin
+  @mixin rotate( $val: -2deg ) {
+    -webkit-transform: rotate($val);
+    -moz-transform: rotate($val);
+    -ms-transform: rotate($val);
+    -o-transform: rotate($val);
+    transform: rotate($val);
+  }
+  
+  // fix WOW.js flash // we should do this another way; edge cases of no js will get blanks
+  .wow {
+    visibility: hidden;
+  }
+  
+  .btn-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: -9000em;
+    display: block;
+  }

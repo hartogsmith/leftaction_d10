@@ -1,0 +1,241 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the front page
+ * CUSTOM
+#}
+
+{# Navbar #}
+{% if page.navigation_left or page.navigation_center or page.navigation_right or page.navigation_collapsible %}
+  {% block navbar %}
+    <header class="navbar {% if is_front %} front{% endif %}" id="navbar" role="banner">
+
+      <div class="navbar-header">
+
+		<div class="navbar-header-left">
+			{{ page.navigation_left }} 
+		</div>
+
+  		<div class="navbar-header-right"> 
+			{{ page.navigation_right }}
+			{# .btn-navbar is used as the toggle for collapsed navbar content #}
+			{% if page.navigation_collapsible %}
+				<button type="button" id="navbar_toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fas fa-bars"></span>
+					<span class="fas fa-times"></span>
+				</button>
+			{% endif %}
+        </div>
+
+      </div>{# /.navbar-header #}
+
+      {# Navigation (collapsible) #}
+      {% if page.navigation_collapsible %}
+        <div id="navbar-collapse" class="collapse">
+            <div class="navbar-collapse-left">{{ page.navigation_collapsible }}</div>
+            {% if page.navigation_collapsible_right %}
+            	<div class="navbar-collapse-right">
+					{% block navigation_collapsible_right %}
+						{{ page.navigation_collapsible_right }}
+					{% endblock %}
+				</div>
+	      	{% endif %}
+          </div>
+      {% endif %}
+
+    </header>
+  {% endblock %}
+{% endif %}
+
+<div class="hero-container">
+	{% if page.hero %}
+		{% block hero %}
+			{{ page.hero }}
+		{% endblock %}
+	{% else %}
+		{% if page.header %}
+			{% block header %}
+			  <div class="block-header container" role="heading">
+				{{ page.header }}
+			  </div>
+			{% endblock %}
+		{% endif %}
+	{% endif %}
+</div>
+<div class="page-container">
+
+	{# Main #}
+	{% block main %}
+
+	{% if page.home_jumbotron %}
+		{% block home_jumbotron %}
+		{{ page.home_jumbotron }}
+		{% endblock %}
+	{% endif %}
+
+	<div id="main_content" role="main" class="main-container-outer main-container-outer-front js-quickedit-main-content">
+		<div class="main-container">
+			{% if messages %}
+				{% block messages %}
+				{{ messages }}
+				{% endblock %}
+			{% endif %}
+
+			{% if page.highlighted %}
+				{% block highlighted %}
+				<div class="highlighted">{{ page.highlighted }}</div>
+				{% endblock %}
+			{% endif %}
+
+			{% if page.help %}
+				{% block help %}
+				{{ page.help }}
+				{% endblock %}
+			{% endif %}
+
+			{% block content %}
+				{{ page.content }}
+			{% endblock %}
+
+			{% if page.home_block_1 %}
+				{% block home_block_1 %}
+				<section class="home-block-1">
+				<div class="inner">
+				{{ page.home_block_1 }}
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}
+
+			{% if page.home_block_2 %}
+				{% block home_block_2 %}
+				<section class="home-block-2">
+				<div class="inner">
+				{{ page.home_block_2 }}
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}	
+
+			{% if page.home_block_3 %}
+				{% block home_block_3 %}
+				<section class="home-block-3">
+				<div class="inner">
+				{{ page.home_block_3 }} 
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}
+
+			{% if page.home_block_4 %}
+				{% block home_block_4 %}
+				<section class="home-block-4">
+				<div class="inner">
+				{{ page.home_block_4 }}
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}		
+
+			{% if page.home_block_5 %}
+				{% block home_block_5 %}
+				<section class="home-block-5">
+				<div class="inner">
+				{{ page.home_block_5 }}
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}		
+
+			{% if page.home_block_6 %}
+				{% block home_block_6 %}
+				<section class="home-block-6">
+				<div class="inner">
+				{{ page.home_block_6 }}
+				</div>
+				</section>
+				{% endblock %}
+			{% endif %}	
+
+		</div>
+	</div>
+
+	{% endblock %}
+
+	{% if (page.footer_top_center) or (page.footer_upper_left) or (page.footer_upper_right) or (page.footer_lower_left) or (page.footer_lower_right) or (page.footer_bottom_center) %}
+		<footer class="main-footer-outer">
+			<div class="main-footer">
+
+				{% if page.footer_top_center %}
+				  {% block footer_top_center %}
+				  	<div class="footer-top-outer">
+					  <div class="footer-top-center">{{ page.footer_top_center }}</div>
+					</div>
+				  {% endblock %}
+				{% endif %}
+
+				{% if page.footer_upper_left or page.footer_upper_right %}
+					<div class="footer-upper-outer">
+             			{% if page.footer_upper_left %}
+               				{% block footer_upper_left %}
+                 				<div class="footer-upper-left">{{ page.footer_upper_left }}</div>
+                			{% endblock %}
+             			{% endif %}
+						
+						{% if page.footer_upper_right %}
+						  {% block footer_upper_right %}
+							  <div class="footer-upper-right">{{ page.footer_upper_right }}</div>
+						  {% endblock %}
+						{% endif %}
+					</div>
+				{% endif %}
+
+				{% if page.footer_center_center %}
+					<div class="footer-center-outer">
+						{% if page.footer_center_center %}
+						  {% block footer_center_center %}
+							  <div class="footer-center-center col col-sm-12">{{ page.footer_center_center }}</div>
+						  {% endblock %}
+						{% endif %}
+					</div>
+				{% endif %}
+
+				{% if page.footer_lower_left or page.footer_lower_right %}
+					<div class="footer-lower-outer">			
+						{% if page.footer_lower_left %}
+						  {% block footer_lower_left %}
+							  <div class="footer-lower-left">{{ page.footer_lower_left }}</div>
+						  {% endblock %}
+						{% endif %}
+						{% if page.footer_lower_right %}
+						  {% block footer_lower_right %}
+							  <div class="footer-lower-right">{{ page.footer_lower_right }}</div>
+						  {% endblock %}
+						{% endif %}	
+					</div>
+				{% endif %}
+
+				{% if page.footer_bottom_center %}
+					{% block footer_bottom_center %}
+						<div class="footer-bottom-outer">
+							<div class="footer-bottom-center">{{ page.footer_bottom_center }}</div>
+						</div>
+					{% endblock %}
+				{% endif %}
+
+		        {% if page.disclaimer %}
+		          {% block disclaimer %}
+		            <div class="disclaimer-outer"><div class="disclaimer">{{ page.disclaimer }}</div></div>
+		          {% endblock %}
+		        {% endif %}
+
+			</div><!-- /container -->
+		</footer>
+	{% endif %}
+</div><!-- /page-container -->
+
+{% if page.tracking_footer %}
+  {% block tracking_footer %}
+  	{{ page.tracking_footer }}
+  {% endblock %}
+{% endif %}

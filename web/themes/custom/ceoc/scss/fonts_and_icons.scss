@@ -1,0 +1,249 @@
+/* Scss Document */
+
+@font-face{
+  font-family:Garamond;
+  font-weight:400;
+  font-style:normal;
+  font-stretch:normal;
+  src:url("../fonts/Garamond/320D60_1_0.eot?#iefix") format("embedded-opentype"),url("../fonts/Garamond/320D60_1_0.woff2") format("woff2"),url("../fonts/Garamond/320D60_1_0.woff") format("woff"),url("../fonts/Garamond/320D60_1_0.ttf") format("truetype")
+}
+@font-face{
+  font-family:Garamond;
+  font-weight:400;
+  font-style:italic;
+  font-stretch:normal;
+  src:url("../fonts/Garamond/320D60_2_0.eot?#iefix") format("embedded-opentype"),url("../fonts/Garamond/320D60_2_0.woff2") format("woff2"),url("../fonts/Garamond/320D60_2_0.woff") format("woff"),url("../fonts/Garamond/320D60_2_0.ttf") format("truetype")
+}
+@font-face{
+  font-family:Garamond;
+  font-weight:600;
+  font-style:normal;
+  src:url("../fonts/Garamond/320D60_0_0.eot?#iefix") format("embedded-opentype"),url("../fonts/Garamond/320D60_0_0.woff2") format("woff2"),url("../fonts/Garamond/320D60_0_0.woff") format("woff"),url("../fonts/Garamond/320D60_0_0.ttf") format("truetype")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:400;
+  font-style:normal;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-45Light.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-45Light.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-45Light.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:400;
+  font-style:italic;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-46LightItalic.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-46LightItalic.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-46LightItalic.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:500;
+  font-style:normal;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-55Roman.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-55Roman.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-55Roman.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:500;
+  font-style:italic;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-56Italic.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-56Italic.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-56Italic.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:600;
+  font-style:normal;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-65Medium.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-65Medium.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-65Medium.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:600;
+  font-style:italic;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-66MediumItalic.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-66MediumItalic.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-66MediumItalic.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:700;
+  font-style:normal;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-75Bold.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-75Bold.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-75Bold.woff") format("woff")
+}
+@font-face{
+  font-family:HaasDisp;
+  font-weight:700;
+  font-style:italic;
+  font-stretch:normal;
+  src:url("../fonts/HaasGrot/HaasGrotDispR-76BoldItalic.eot?#iefix") format("embedded-opentype"),url("../fonts/HaasGrot/HaasGrotDispR-76BoldItalic.woff2") format("woff2"),url("../fonts/HaasGrot/HaasGrotDispR-76BoldItalic.woff") format("woff")
+}
+@font-face {
+  font-family: Icons;
+  src: url("../fonts/icons/d64bb0893de042411a113af690158382-Icons.woff") format("woff"),
+    url("../fonts/icons/57440ea3154d579a55cb08d26be1cefa-Icons.ttf") format("truetype"),
+    url("../fonts/icons/c615f7d409ad1a8906f6dbf874190705-Icons.svg#Icons") format("svg");
+}
+
+.Icon {
+  line-height: 1;
+  &:before {
+    font-family: Icons !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    vertical-align: top;
+  }
+}
+.Icon--alipay {
+  &:before {
+    content: "\F101";
+  }
+}
+.Icon--amazon {
+  &:before {
+    content: "\F102";
+  }
+}
+.Icon--amazonFresh {
+  &:before {
+    content: "\F103";
+  }
+}
+.Icon--arrowDown {
+  &:before {
+    content: "\F104";
+  }
+}
+.Icon--arrowLeft {
+  &:before {
+    content: "\F105";
+  }
+}
+.Icon--arrowRight {
+  &:before {
+    content: "\F106";
+  }
+}
+.Icon--carouselLeftArrow {
+  &:before {
+    content: "\F107";
+  }
+}
+.Icon--carouselRightArrow {
+  &:before {
+    content: "\F108";
+  }
+}
+.Icon--check {
+  &:before {
+    content: "\F109";
+  }
+}
+.Icon--chevronRight {
+  &:before {
+    content: "\F10A";
+  }
+}
+.Icon--email {
+  &:before {
+    content: "\F10B";
+  }
+}
+.Icon--facebook {
+  &:before {
+    content: "\F10C";
+  }
+}
+.Icon--facebookNew {
+  &:before {
+    content: "\F10D";
+  }
+}
+.Icon--filter {
+  &:before {
+    content: "\F10E";
+  }
+}
+.Icon--linkedin {
+  &:before {
+    content: "\F10F";
+  }
+}
+.Icon--magnifier {
+  &:before {
+    content: "\F110";
+  }
+}
+.Icon--messenger {
+  &:before {
+    content: "\F111";
+  }
+}
+.Icon--paypal {
+  &:before {
+    content: "\F112";
+  }
+}
+.Icon--phone {
+  &:before {
+    content: "\F113";
+  }
+}
+.Icon--pinterest {
+  &:before {
+    content: "\F114";
+  }
+}
+.Icon--play {
+  &:before {
+    content: "\F115";
+  }
+}
+.Icon--quotes {
+  &:before {
+    content: "\F116";
+  }
+}
+.Icon--target {
+  &:before {
+    content: "\F117";
+  }
+}
+.Icon--ticket {
+  &:before {
+    content: "\F118";
+  }
+}
+.Icon--toggleArrowDown {
+  &:before {
+    content: "\F119";
+  }
+}
+.Icon--twitter {
+  &:before {
+    content: "\F11A";
+  }
+}
+.Icon--twitter2 {
+  &:before {
+    content: "\F11B";
+  }
+}
+.Icon--user {
+  &:before {
+    content: "\F11C";
+  }
+}
+.Icon--walmart {
+  &:before {
+    content: "\F11D";
+  }
+}
+.Icon--x-16 {
+  &:before {
+    content: "\F11E";
+  }
+}
+.Icon--x {
+  &:before {
+    content: "\F11F";
+  }
+}

@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+ * /////////////////////////////////////
+ * CUSTOM: 
+ // added flag for squelching empty div
+ // wrapper when no class is set in view style
+* /////////////////////////////////////
+#}
+
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
+
+{% set nowrap = true %}
+
+{% for row in rows %}
+
+	{% for class in row.attributes %}
+		{% if class|length > 0 %}
+			{% set nowrap = false %}
+		{% endif %}
+	{% endfor %}
+
+	{%
+		set row_classes = [
+			default_row_class ? 'views-row',
+		]
+	%}
+
+	{% if nowrap %}
+		{{ row.content }}
+	{% else %}
+		<div{{ row.attributes.addClass(row_classes) }}>
+			{{ row.content }}
+		</div>
+	{% endif %}
+{% endfor %}

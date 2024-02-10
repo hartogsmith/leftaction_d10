@@ -1,0 +1,16 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+global-scripts:    
+  js:
+    #js/wow.min.js: {}
+    js/jquery.cycle2.min.js: {}
+    js/bootstrap.bundle.min.js: {}
+    #//code.jquery.com/jquery-migrate-1.2.1.min.js: { type: external, minified: true }
+    js/slick.min.js: {}
+    js/load.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
