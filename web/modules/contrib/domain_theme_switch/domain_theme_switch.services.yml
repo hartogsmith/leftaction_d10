@@ -1,0 +1,9 @@
+services:
+  domain_theme_switch.domain_theme_lookup:
+    class: Drupal\domain_theme_switch\DomainThemeLookup
+    arguments: ['@config.factory']
+  theme.negotiator.domain_theme_switch:
+    class: Drupal\domain_theme_switch\Theme\ThemeSwitchNegotiator
+    arguments: ['@router.admin_context','@current_user','@domain.negotiator','@domain_theme_switch.domain_theme_lookup']
+    tags:
+      - { name: theme_negotiator, priority: 10 }

@@ -1,0 +1,13 @@
+name: 'Domain Theme switch'
+description: 'Theme switch for different domains'
+type: module
+package: Domain
+core_version_requirement: ^8 || ^9 || ^10
+configure: domain_theme_switch.settings
+dependencies:
+  - domain:domain
+
+# Information added by Drupal.org packaging script on 2023-11-03
+version: '2.0.0'
+project: 'domain_theme_switch'
+datestamp: 1699014035
