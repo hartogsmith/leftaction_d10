@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '933e7a38b83e6042e9958d64c7f67cc2d05a3f19',
+        'reference' => '9a5d9db510d4778d483d67cf4b92695ccf5da4b9',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -307,6 +307,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/fontawesome' => array(
+            'pretty_version' => '2.26.0',
+            'version' => '2.26.0.0',
+            'reference' => '8.x-2.26',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/fontawesome',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/google_analytics' => array(
             'pretty_version' => '4.0.2',
             'version' => '4.0.2.0',
@@ -373,7 +382,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '933e7a38b83e6042e9958d64c7f67cc2d05a3f19',
+            'reference' => '9a5d9db510d4778d483d67cf4b92695ccf5da4b9',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
