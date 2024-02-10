@@ -40,23 +40,3 @@ regions:
   tracking_footer: 'Tracking (Footer)'
 libraries-override:
   bootstrap5/global-styling: false
-
-#regions:
-# navigation: 'Navigation'
-# open_nav_left: 'Open Nav Left'
-# open_nav_right: 'Open Nav Right'
-# highlighted: 'Highlighted'
-# help: 'Help'
-# main_jumbotron: 'Main Jumbotron'
-# home_block_1: 'Home Block 1'
-# home_block_2: 'Home Block 2'
-# home_block_3: 'Home Block 3'
-# content: 'Content'
-# sidebar_first: 'Sidebar'
-# footer_signup: 'Footer Signup'
-# footer_upper_left: 'Footer Upper Left'
-# footer_upper_right: 'Footer Upper Right'
-# footer_lower_left: 'Footer Lower Left'
-# footer_lower_right: 'Footer Lower Right'
-# admin_left: 'Admin Left'
-# admin_right: 'Admin Right'
