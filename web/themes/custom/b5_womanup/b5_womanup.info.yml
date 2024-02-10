@@ -1,0 +1,62 @@
+name: 'B5 Left Action'
+type: theme
+description: 'B5 Left Action subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^9.4 || ^10'
+'base theme': bootstrap5
+libraries:
+  - b5_womanup/global-styling
+ckeditor_stylesheets:
+  - css/style.css
+ckeditor5-stylesheets:
+  - css/ck5style.css
+regions:
+  tracking_header: 'Tracking (Header)'
+  navigation_left: 'Navigation Left'
+  navigation_right: 'Navigation Right'
+  navigation_collapsible: 'Navigation (Collapsible, Left)'
+  navigation_collapsible_right: 'Navigation (Collapsible, Right)'
+  extra_nav: 'Extra Navigation'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  hero: 'Hero'
+  home_jumbotron: 'Home Jumbotron'
+  home_block_1: 'Home Block 1'
+  home_block_2: 'Home Block 2'
+  home_block_3: 'Home Block 3'
+  interior_jumbotron: 'Interior Jumbotron'
+  header: 'Header'
+  content: 'Content'
+  after_content: 'After Content'
+  node_block: 'Node Block'
+  footer_action: 'Footer Action'
+  footer_top_center: 'Footer Top Center'
+  footer_upper_left: 'Footer Upper Left'
+  footer_upper_right: 'Footer Upper Right'
+  footer_center_center: 'Footer Center Center'
+  footer_lower_left: 'Footer Lower Left'
+  footer_lower_right: 'Footer Lower Right'
+  footer_bottom_center: 'Footer Bottom Center'
+  disclaimer: 'Footer Bottom Disclaimer'
+  tracking_footer: 'Tracking (Footer)'
+libraries-override:
+  bootstrap5/global-styling: false
+
+#regions:
+# navigation: 'Navigation'
+# open_nav_left: 'Open Nav Left'
+# open_nav_right: 'Open Nav Right'
+# highlighted: 'Highlighted'
+# help: 'Help'
+# main_jumbotron: 'Main Jumbotron'
+# home_block_1: 'Home Block 1'
+# home_block_2: 'Home Block 2'
+# home_block_3: 'Home Block 3'
+# content: 'Content'
+# sidebar_first: 'Sidebar'
+# footer_signup: 'Footer Signup'
+# footer_upper_left: 'Footer Upper Left'
+# footer_upper_right: 'Footer Upper Right'
+# footer_lower_left: 'Footer Lower Left'
+# footer_lower_right: 'Footer Lower Right'
+# admin_left: 'Admin Left'
+# admin_right: 'Admin Right'

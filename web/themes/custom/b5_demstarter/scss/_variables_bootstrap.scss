@@ -1,0 +1,90 @@
+// Bootstrap variables (overrides).
+$form-text-margin-top: 0;
+$legend-font-size: 1rem;
+$table-cell-padding-x: .75rem;
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #EEEEE6 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #CFCFBB !default;
+$gray-400: #ced4da !default;
+$gray-500: #334466 !default;
+$gray-600: #6c757d !default;
+$gray-700: #334466 !default;
+$gray-800: #343a40 !default;
+$gray-900: #223344 !default;
+$black:    #000 !default;
+
+$gray-base:     $black;
+$gray-darker:   $gray-900;
+$gray-dark:     $gray-700;
+$gray:          $gray-500;
+$gray-light:    $gray-300;
+$gray-lighter:  $gray-100;
+
+// scss-docs-start theme-color-variables
+$primary:         #FF8800 !default;   // the brighter
+$secondary:       #336699 !default;   // the darker
+$success:         #5cb85c !default;
+$info:            $gray !default;
+$warning:         #f0ad4e !default;
+$danger:          #d9534f !default;
+
+$brand-primary: $primary;
+$brand-secondary: $secondary;
+$brand-success: $success;
+$brand-info: $info;
+$brand-warning: $warning;
+$brand-danger: $danger;
+
+$t: transparent !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
+$body-text-align:           null !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              $primary !default;
+$link-decoration:                         underline !default;
+
+
+$spacer: 1rem !default;
+$padding-base-vertical: $spacer;
+$padding-large-vertical: $spacer * 3;
+
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-size-large: $font-size-lg;
+$font-size-small: $font-size-sm;
+
+$navbar-default-toggle-bg: transparent;
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color:                      $white !default;
+$navbar-inverse-bg:                         $brand-secondary !default;
+$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
+$navbar-inverse-link-hover-color:           $brand-primary !default;
+$navbar-inverse-link-hover-bg:              $t !default;
+$navbar-inverse-link-active-color:          $brand-primary !default;
+$navbar-inverse-link-active-bg:             $t !default;
+$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
+$font-family-sans-serif:  "nimbus-sans", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       "Times New Roman", Times, serif !default;
