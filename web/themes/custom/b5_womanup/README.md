@@ -1,4 +1,4 @@
-# B5 Left Action theme
+# B5 WomanUp theme
 
 [Bootstrap 5](https://www.drupal.org/project/bootstrap5) subtheme.
 

@@ -1,6 +1,6 @@
-name: 'B5 Left Action'
+name: 'B5 Furdle'
 type: theme
-description: 'B5 Left Action subtheme based on Bootstrap 5 theme.'
+description: 'B5 Furdle subtheme based on Bootstrap 5 theme.'
 core_version_requirement: '^9.4 || ^10'
 'base theme': bootstrap5
 libraries:
