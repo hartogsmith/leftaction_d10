@@ -247,6 +247,15 @@ figure {
 }
 
 // main nav
+
+body.toolbar-vertical {
+  .navbar-main {
+    margin-top: 50px;
+  }
+
+}
+
+
 .navbar-main.bg-t {
   background-color: transparent;
   transition: all ease .5s;
