@@ -1,0 +1,53 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420" height="420" viewBox="0 0 420 420">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        opacity: 0.5;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: #f62;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2185.87" y1="-1610.87" x2="2185.87" y2="-1580.87" gradientTransform="matrix(0, 1, 1, 0, 1960.87, -1960.87)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#335" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#335" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="210" y1="110" x2="210" y2="130" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="2098.37" y1="-1748.37" x2="2098.37" y2="-1728.37" gradientTransform="matrix(0, 1, 1, 0, 1888.37, -1888.37)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="225" y1="380" x2="225" y2="410" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>libart-bug-05</title>
+  <g id="_Group_" data-name="&lt;Group&gt;">
+    <g id="_Group_2" data-name="&lt;Group&gt;">
+      <polygon id="_Path_" data-name="&lt;Path&gt;" class="cls-1" points="380 410 380 70 350 40 350 380 380 410"/>
+      <g id="_Group_3" data-name="&lt;Group&gt;">
+        <polygon id="_Path_2" data-name="&lt;Path&gt;" class="cls-2" points="140 110 160 130 280 130 280 110 140 110"/>
+        <polygon id="_Path_3" data-name="&lt;Path&gt;" class="cls-3" points="140 110 160 130 160 310 140 310 140 110"/>
+        <polygon id="_Path_4" data-name="&lt;Path&gt;" class="cls-4" points="380 410 100 410 70 380 350 380 380 410"/>
+        <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" class="cls-5" d="M350,380H70V40H350ZM310,80H110V340H310Z"/>
+      </g>
+    </g>
+    <path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" class="cls-6" d="M310,340H110V80H310ZM280,110H140V310H280Z"/>
+  </g>
+</svg>
