@@ -194,9 +194,28 @@ figure {
   // padding: 2px 8px;
 	letter-spacing: 0; // explicitly set to override NGP/EA/AN embeds 
 	transition: all ease-in-out .5s; 
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 8px;
+  font-size: 16px;
+  line-height: 1.67;
+  border-radius: 5px;
   &:hover {
     //@include scale(1.02); 
   }
+}
+.btn-info, .bigradio .form-type-radio label:hover {
+  color: #ffffff;
+  background-color: #558;
+  border-color: #4b4b78;
 }
 
 // ========================================================================
