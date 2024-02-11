@@ -248,11 +248,8 @@ figure {
 
 // main nav
 
-body.toolbar-vertical {
-  .navbar-main {
-    margin-top: 50px;
-  }
-
+div#toolbar-administration {
+  z-index: 100000000;
 }
 
 
