@@ -1,3 +1,5 @@
-jQuery( 'btn.navbar-toggler' ).on( "click", function() {
-    jQuery('nav.navbar-main').toggleClass('open')
-  } );
+jQuery( document ).ready(function() {
+    jQuery( 'btn.navbar-toggler' ).on( "click", function() {
+        jQuery('nav.navbar-main').toggleClass('open');
+      } );
+});
