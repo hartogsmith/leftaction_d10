@@ -323,12 +323,14 @@ footer.main-footer-outer {
     li { 
       font-size: 27px; 
       display: inline-block;
-      &+i {
+      &+li {
         margin-left: 15px; 
       }
       a {
         display: inline-block;
         padding: 5px; 
+        line-height: 1.5; 
+        font-size: 26px;
         &:hover {
           color: $brand-secondary; 
         }
