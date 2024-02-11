@@ -22,6 +22,15 @@
 .btn-block {
   display: block;
 }
+.btn-default {
+  color: #ffffff;
+  background-color: $secondary;
+  border-color: $secondary;
+  transition: all ease .5s; 
+  &:hover {
+    color: darken($brand-secondary, 20%);
+  }
+}
 .img-responsive {
   @extend .img-fluid;
 }
