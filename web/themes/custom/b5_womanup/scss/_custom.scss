@@ -352,16 +352,12 @@ footer.main-footer-outer {
       a {
         display: inline-block;
         padding: 5px; 
-      }
-      .fab::before,
-      .fas::before,
-      .far::before,
-      .fa::before,
-      .fa-brands::before {
         line-height: 1.5; 
         font-size: 26px;
-        &:hover {
-          color: $brand-secondary; 
+        &:hover{
+          span {
+            color: $brand-secondary; 
+          }
         }
       }
     }
