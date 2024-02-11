@@ -1,89 +1,89 @@
-b5_leftaction.screen.xs-max:
+b5_left_action.screen.xs-max:
   label: xs-max
   mediaQuery: '(max-width: 575.98px)'
   weight: 1
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.sm-min:
+b5_left_action.screen.sm-min:
   label: sm-min
   mediaQuery: '(min-width: 576px)'
   weight: 2
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.sm-max:
+b5_left_action.screen.sm-max:
   label: sm-max
   mediaQuery: '(max-width: 767.98px)'
   weight: 3
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.md-min:
+b5_left_action.screen.md-min:
   label: md-min
   mediaQuery: '(min-width: 768px)'
   weight: 4
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.md-max:
+b5_left_action.screen.md-max:
   label: md-max
   mediaQuery: '(max-width: 991.98px)'
   weight: 5
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.lg-min:
+b5_left_action.screen.lg-min:
   label: lg-min
   mediaQuery: '(min-width: 992px)'
   weight: 6
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.lg-max:
+b5_left_action.screen.lg-max:
   label: lg-max
   mediaQuery: '(max-width: 1199.98px)'
   weight: 7
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.xl-min:
+b5_left_action.screen.xl-min:
   label: xl-min
   mediaQuery: '(min-width: 1200px)'
   weight: 8
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.xl-max:
+b5_left_action.screen.xl-max:
   label: xl-max
   mediaQuery: '(max-width: 1399.98px)'
   weight: 9
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
 
-b5_leftaction.screen.xxl-min:
+b5_left_action.screen.xxl-min:
   label: xxl-min
   mediaQuery: '(min-width: 1400px)'
   weight: 10
-  group: b5_leftaction.screen
+  group: b5_left_action.screen
   multipliers:
     - 1x
     - 2x
