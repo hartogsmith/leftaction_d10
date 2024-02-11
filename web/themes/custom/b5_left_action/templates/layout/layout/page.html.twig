@@ -147,7 +147,6 @@
 					</div>
 				{% endif %}
 
-
 				{% if page.footer_upper_left or page.footer_upper_right %}
 					<div class="footer-upper-outer">
              			{% if page.footer_upper_left %}
@@ -185,11 +184,17 @@
 						</div>
 				{% endif %}
 
-        {% if page.disclaimer %}
-            <div class="disclaimer-outer"><div class="disclaimer">{{ page.disclaimer }}</div></div>
-        {% endif %}
+			{% if page.disclaimer %}
+				<div class="disclaimer-outer">
+					<div class="disclaimer">
+						{{ page.disclaimer }}
+					</div>
+				</div>
+			{% endif %}
+			
 		</footer>
 	{% endif %}
+
 </div><!-- /page-container -->
 
 {% if page.tracking_footer %}
