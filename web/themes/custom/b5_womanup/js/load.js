@@ -1,5 +1,5 @@
-jQuery( document ).ready(function() {
-    jQuery( 'btn.navbar-toggler' ).on( "click", function() {
-        jQuery('nav.navbar-main').toggleClass('open');
-      } );
+const theButton = document.querySelector("button.navbar-toggler");
+const theNavbar = document.querySelector("nav.navbar-main");
+theButton.addEventListener("click", (event) => {
+    theNavbar.classList.toggle("open");
 });
