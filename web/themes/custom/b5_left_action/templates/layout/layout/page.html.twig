@@ -140,58 +140,60 @@
 	{% if (page.footer_top_center) or (page.footer_upper_left) or (page.footer_upper_right) or (page.footer_lower_left) or (page.footer_lower_right) or (page.footer_bottom_center) %}
 		<footer class="main-footer-outer">
 			<div class="main-footer container">
+				
+					{% if page.footer_top_center %}
+						<div class="footer-top-outer row">
+							<div class="footer-top-center">{{ page.footer_top_center }}</div>
+						</div>
+					{% endif %}
+				
 
-				{% if page.footer_top_center %}
-				  	<div class="footer-top-outer">
-					  <div class="footer-top-center">{{ page.footer_top_center }}</div>
-					</div>
-				{% endif %}
+					{% if page.footer_upper_left or page.footer_upper_right %}
+						<div class="footer-upper-outer row">
+							{% if page.footer_upper_left %}
+									<div class="footer-upper-left col-sm-6">{{ page.footer_upper_left }}</div>	
+							{% endif %}
+							
+							{% if page.footer_upper_right %}
+								<div class="footer-upper-right col-sm-6">{{ page.footer_upper_right }}</div>
+							{% endif %}
+						</div>
+					{% endif %}
 
-				{% if page.footer_upper_left or page.footer_upper_right %}
-					<div class="footer-upper-outer">
-             			{% if page.footer_upper_left %}
-                 				<div class="footer-upper-left">{{ page.footer_upper_left }}</div>	
-             			{% endif %}
-						
-						{% if page.footer_upper_right %}
-							  <div class="footer-upper-right">{{ page.footer_upper_right }}</div>
-						{% endif %}
-					</div>
-				{% endif %}
+					{% if page.footer_center_center %}
+						<div class="footer-center-outer row">
+							{% if page.footer_center_center %}
+								<div class="footer-center-center col col-sm-12">{{ page.footer_center_center }}</div>
+							{% endif %}
+						</div>
+					{% endif %}
 
-				{% if page.footer_center_center %}
-					<div class="footer-center-outer">
-						{% if page.footer_center_center %}
-							  <div class="footer-center-center col col-sm-12">{{ page.footer_center_center }}</div>
-						{% endif %}
-					</div>
-				{% endif %}
+					{% if page.footer_lower_left or page.footer_lower_right %}
+						<div class="footer-lower-outer row">			
+							{% if page.footer_lower_left %}
+								<div class="footer-lower-left col-sm-6">{{ page.footer_lower_left }}</div>
+							{% endif %}
+							{% if page.footer_lower_right %}
+								<div class="footer-lower-right col-sm-6">{{ page.footer_lower_right }}</div>
+							{% endif %}	
+						</div>
+					{% endif %}
 
-				{% if page.footer_lower_left or page.footer_lower_right %}
-					<div class="footer-lower-outer">			
-						{% if page.footer_lower_left %}
-							  <div class="footer-lower-left">{{ page.footer_lower_left }}</div>
-						{% endif %}
-						{% if page.footer_lower_right %}
-							  <div class="footer-lower-right">{{ page.footer_lower_right }}</div>
-						{% endif %}	
-					</div>
-				{% endif %}
-
-				{% if page.footer_bottom_center %}
-						<div class="footer-bottom-outer">
+					{% if page.footer_bottom_center %}
+						<div class="footer-bottom-outer row">
 							<div class="footer-bottom-center">{{ page.footer_bottom_center }}</div>
 						</div>
-				{% endif %}
+					{% endif %}
 
-			{% if page.disclaimer %}
-				<div class="disclaimer-outer">
-					<div class="disclaimer">
-						{{ page.disclaimer }}
-					</div>
-				</div>
-			{% endif %}
+					{% if page.disclaimer %}
+						<div class="disclaimer-outer row">
+							<div class="disclaimer">
+								{{ page.disclaimer }}
+							</div>
+						</div>
+					{% endif %}
 
+			</div>
 		</footer>
 	{% endif %}
 
