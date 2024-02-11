@@ -258,7 +258,17 @@ ul.menu {
      }
   }
 }
-
+.navbar-toggler {
+  padding: 0;
+  border: none;
+  .fa-solid.fa-bars {
+    font-size: 36px;
+    color: $white;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
 // ------------------------------------------------------------------------
 // SECONDARY NAVS
 
