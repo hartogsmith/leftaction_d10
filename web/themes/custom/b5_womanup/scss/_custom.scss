@@ -297,19 +297,17 @@ footer.main-footer-outer {
     margin: 0 0 (3 * $padding-base-vertical) 0;
     li {
         display: inline-block; 
-			  @include media-breakpoint-down(sm) {
-			  }
       &+li {
-          a {
-          
-          }
+          border-left: 1px solid;
         }
       a {
         display: inline-block;
-        margin-left: 15px;
         padding: 0;
-        font-weight: 700;
-        text-transform: uppercase;
+        //font-weight: 700;
+        //text-transform: uppercase;
+        &+a {
+          margin-left: 15px;
+        }
         &:hover {
             // text-decoration: underline;
             background-color: $t;
@@ -324,6 +322,7 @@ footer.main-footer-outer {
     }
     .menu--social-wu .menu {
       margin: 40px 0 (3 * $padding-base-vertical) 0;
+      text-align: right;
       li { 
 				font-size: 27px; 
         display: inline-block;
