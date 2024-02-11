@@ -354,6 +354,7 @@ footer.main-footer-outer {
         padding: 5px; 
         line-height: 1.5; 
         font-size: 26px;
+        transition: all ease .5s;
         &:hover{
           span {
             color: $brand-secondary; 
