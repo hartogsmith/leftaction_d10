@@ -194,7 +194,6 @@ figure {
   // padding: 2px 8px;
 	letter-spacing: 0; // explicitly set to override NGP/EA/AN embeds 
 	transition: all ease-in-out .5s; 
-  display: inline-block;
   margin-bottom: 0;
   font-weight: 700;
   text-align: center;
@@ -209,7 +208,10 @@ figure {
   line-height: 1.67;
   border-radius: 5px;
   &:hover {
-    //@include scale(1.02); 
+    color: #ffffff;
+    background-color: #414169;
+    border-color: #343453;
+    transform: scale(1.02);
   }
 }
 .btn-info, .bigradio .form-type-radio label:hover {
