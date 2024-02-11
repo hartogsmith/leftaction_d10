@@ -247,6 +247,10 @@ figure {
 }
 
 // main nav
+.navbar-dark.t {
+  background-color: transparent;
+}
+
 .navigation.menu--main-menu-wu 
 ul.menu {
   margin-top: calc(2 * $spacer);
