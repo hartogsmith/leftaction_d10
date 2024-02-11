@@ -24,12 +24,12 @@ $gray-light:    $gray-300;
 $gray-lighter:  $gray-100;
 
 // scss-docs-start theme-color-variables
-$primary:         #FF8800 !default;   // the brighter
-$secondary:       #336699 !default;   // the darker
-$success:         #5cb85c !default;
-$info:            $gray !default;
+$primary:         #222277 !default;   // the brighter
+$secondary:       #CC11AA !default;   // the darker
+$success:         #4C9F00 !default;
+$info:            $gray-base !default;
 $warning:         #f0ad4e !default;
-$danger:          #d9534f !default;
+$danger:          #d9534f !default;  
 
 $brand-primary: $primary;
 $brand-secondary: $secondary;
