@@ -41,6 +41,7 @@
 			{% if page.home_block_3 %}
 				{% set home_blocks = home_blocks + 1 %}
 			{% endif %}
+			{% set home_blocks = 12 / home_blocks %}
 			<h1>home_blocks = {{ home_blocks }}</h1>
 			<div class="container">
 				<div class="row home-3">
