@@ -247,13 +247,17 @@ figure {
 }
 
 // main nav
-.navbar-dark.t {
+.navbar-main.t {
   background-color: transparent;
+  transition: all ease .5s;
 }
 
-.navigation.menu--main-menu-wu 
+.navbar-main.t.open {
+  background: $primary;
+}
 ul.menu {
   margin-top: calc(2 * $spacer);
+  margin-bottom: calc(2 * $spacer);
   li {
       margin-bottom: 10px;
       float: none;
