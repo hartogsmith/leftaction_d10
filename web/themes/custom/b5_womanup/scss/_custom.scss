@@ -305,13 +305,12 @@ footer.main-footer-outer {
       a {
         display: inline-block;
         padding: 0;
+        text-decoration: underline;
         &:hover {
-            // text-decoration: underline;
             background-color: $t;
             color: $brand-secondary;
         }
         &:focus {
-            // text-decoration: underline;
             background-color: $t;
             color: darken($brand-secondary, 20%);
         }
@@ -324,12 +323,12 @@ footer.main-footer-outer {
     li { 
       font-size: 27px; 
       display: inline-block;
+      &+i {
+        margin-left: 15px; 
+      }
       a {
         display: inline-block;
         padding: 5px; 
-        &a {
-          margin-left: 15px; 
-        }
         &:hover {
           color: $brand-secondary; 
         }
