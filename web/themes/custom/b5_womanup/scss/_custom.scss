@@ -247,12 +247,12 @@ figure {
 }
 
 // main nav
-.navbar-main.t {
+.navbar-main.bg-t {
   background-color: transparent;
   transition: all ease .5s;
 }
 
-.navbar-main.t.open {
+.navbar-main.bg-t.open {
   background: $primary;
 }
 ul.menu {
