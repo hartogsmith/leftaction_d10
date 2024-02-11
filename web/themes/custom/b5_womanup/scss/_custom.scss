@@ -861,15 +861,6 @@ section.home-block-2 {
   #block-homeabout {
   }
 }
-
-//  swag
-section.home-block-3 {
-  background: #1c1328 url(/themes/custom/b5_womanup/img/bg_swag.jpg) no-repeat top center;
-  background-size: contain;
-  height: 50vw;
-  max-height: 360px;
-  padding: 1.5em 0;
-}
 //  Home Get Involved Block
 section.home-block-4 {
   padding-top: 1rem; 
@@ -888,35 +879,6 @@ section.home-block-5 {
 	padding-bottom: $padding-large-vertical * 2;
   // N.B. Tweet Carousel styling in tweet-carousel.scss 
 }
-/* this needs to be scoped, conflicting w/ social in footer */
-/*#block-social {
-  padding-bottom: $padding-large-vertical * 3;
-  padding-top: $padding-large-vertical ; 
-  @extend .text-center;
-  
-  h2#block-social-menu {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-    margin-top: 0; 
-  }
-  
-  a.fa.c-menu-social__item {
-    font-size: 36px; 
-    transition: all, .5s; 
-    margin-left: 10px;
-    margin-right: 10px;
-    &:hover {
-      background-color: transparent;
-      color: $brand-secondary; 
-    }
-  }
-}*/
-// Home Donate Jumpstart 
-/*.home-donate {
-  padding-bottom: $padding-large-vertical * 3; 
-}*/
 // Home Social Feed
 section.home-block-5 {
   background: $gray url('../images/bg_wood.jpg');
@@ -925,8 +887,8 @@ section.home-block-5 {
 }
 
 // SWAG 
-.home-block-6 {
-  background: #1c1328 url('../images/bg_swag.jpg') no-repeat top center; 
+section.home-block-3 {
+  background: #1c1328 url(/themes/custom/b5_womanup/img/bg_swag.jpg) no-repeat top center;
   background-size: contain;
   @extend .text-inverse !optional; 
   height: 50vw; 
