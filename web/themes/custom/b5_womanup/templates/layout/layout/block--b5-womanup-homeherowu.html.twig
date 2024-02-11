@@ -55,6 +55,15 @@ get image url from media field:
       {# PRINT CONTENT | WITHOUT SPECIFIED FIELD #}
       
       {{ content|without('field_image') }}
+
+      {% if content.field_headline|render %}
+        <h1>{{ field_headline }}</h1>
+      {% endif %}
+
+      {% if content.field_photo_credit|render %}
+        <div>{{ field_photo_credit }}</div>
+      {% endif %}
+
       {# CHECK IF FIELD IS NOT EMPTY #}
       {% if content.field_image|render %}
        {# NOT EMPTY? PRINT #}
