@@ -54,7 +54,7 @@ get image url from media field:
     {% block content %}
       {# PRINT CONTENT | WITHOUT SPECIFIED FIELD #}
       
-      {{ content|without('field_image') }}
+      {{ content | without('field_headline', 'field_photo_credit', 'field_image')}}
 
       {% if content.field_headline|render %}
         <h1>{{ field_headline.0 }}</h1>
@@ -67,6 +67,7 @@ get image url from media field:
       {# CHECK IF FIELD IS NOT EMPTY #}
       {% if content.field_image|render %}
        {# NOT EMPTY? PRINT #}
+       {{ field_image.0 }}
         <div class="block-img-wrap">
           <img src="{{ file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) }}" class="block-img" />
           <img src="{{ file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) }}" alt="{{ content.field_image[0]['#media'].field_media_image.alt }}" />
