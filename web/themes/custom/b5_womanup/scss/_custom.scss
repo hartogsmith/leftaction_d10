@@ -269,9 +269,11 @@ ul.menu {
     }
   }
   &.collapsed {
-    color: $white;
-    &:hover {
-      color: $secondary;
+    .fa-solid.fa-bars {
+      color: $white;
+      &:hover {
+        color: $secondary;
+      }
     }
   }
 }
