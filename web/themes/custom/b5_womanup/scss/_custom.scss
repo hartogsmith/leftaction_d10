@@ -295,6 +295,7 @@ footer.main-footer-outer {
   }
   .menu--footer-menu-wu .menu {
     //margin: 0 0 (3 * $padding-base-vertical) 0;
+    padding-left: 0;
     li {
         display: inline-block; 
       &+li {
@@ -319,6 +320,7 @@ footer.main-footer-outer {
   }
   .menu--social-wu .menu {
     //margin: 40px 0 (3 * $padding-base-vertical) 0;
+    padding-left: 0;
     text-align: right;
     li { 
       font-size: 27px; 
@@ -1567,19 +1569,19 @@ nav.tabs {
 
 /* CLEANING CLASSES FROM MARKUP, WOW/ANI STUFF ADDED IN WOW INIT */
 .navbar-header-left {
-  @extend .col-6;
+  //@extend .col-6;
   @extend .text-left;
 }
 .navbar-header-right {
-  @extend .col-6;
+  //@extend .col-6;
   @extend .text-right;
 }
 .navbar-collapse-left { 
-  @extend .col-sm-12;
+  //@extend .col-sm-12;
   @extend .text-center;
 }
 .navbar-collapse-right { 
-  @extend .col-sm-12;
+  //@extend .col-sm-12;
   @extend .text-center;
 }
 .block-header {
