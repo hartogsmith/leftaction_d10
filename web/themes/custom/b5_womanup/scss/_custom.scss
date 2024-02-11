@@ -1588,22 +1588,22 @@ nav.tabs {
   @extend .text-center;
 }
 .footer-upper-left {
-	@extend .col-sm-6; 
+	//@extend .col-sm-6; 
 } 
 .footer-upper-right {
   @extend .text-sm-right;
-	@extend .col-sm-6; 
+	//@extend .col-sm-6; 
 } 
 .footer-center-center {
   @extend .text-center;
 }
 .footer-lower-left {
   @extend .text-left;
-	@extend .col-sm-8; 
+	//@extend .col-sm-8; 
 }
 .footer-lower-right {
   @extend .text-right;
-	@extend .col-sm-4; 
+	//@extend .col-sm-4; 
 }
 .footer-bottom-center {
   @extend .text-center;
