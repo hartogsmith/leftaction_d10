@@ -299,19 +299,16 @@ footer.main-footer-outer {
         display: inline-block; 
       &+li {
           border-left: 1px solid;
+          margin-left: 15px;
+          padding-left: 15px;
         }
       a {
         display: inline-block;
         padding: 0;
-        //font-weight: 700;
-        //text-transform: uppercase;
-        &+a {
-          margin-left: 15px;
-        }
         &:hover {
             // text-decoration: underline;
             background-color: $t;
-            color: $brand-primary;
+            color: $brand-secondary;
         }
         &:focus {
             // text-decoration: underline;
@@ -330,9 +327,6 @@ footer.main-footer-outer {
       a {
         display: inline-block;
         padding: 5px; 
-        span {
-        display: none; 
-        }
         &a {
           margin-left: 15px; 
         }
@@ -343,7 +337,8 @@ footer.main-footer-outer {
       .fab::before,
       .fas::before,
       .far::before,
-      .fa::before {
+      .fa::before,
+      .fa-brands::before {
         line-height: 1.5; 
         font-size: 26px;
       }
