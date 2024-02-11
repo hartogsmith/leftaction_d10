@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'bc18cb1aa88b2d19a4e9d005174d5b5be33da2e5',
+        'reference' => 'b80b101f86d3f1345621c581ac70b05001f02054',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -298,6 +298,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/entity_clone' => array(
+            'pretty_version' => '2.0.0-beta4',
+            'version' => '2.0.0.0-beta4',
+            'reference' => '2.0.0-beta4',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_clone',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/feeds' => array(
             'pretty_version' => '3.0.0-beta4',
             'version' => '3.0.0.0-beta4',
@@ -391,7 +400,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bc18cb1aa88b2d19a4e9d005174d5b5be33da2e5',
+            'reference' => 'b80b101f86d3f1345621c581ac70b05001f02054',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
