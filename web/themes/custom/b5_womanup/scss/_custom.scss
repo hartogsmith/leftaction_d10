@@ -264,6 +264,7 @@ ul.menu {
   .fa-solid.fa-bars {
     font-size: 36px;
     color: $secondary;
+    transition: all ease .5s;
     &:hover {
       color: $white;
     }
