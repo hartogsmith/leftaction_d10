@@ -237,6 +237,26 @@ figure {
 	@extend .sr-only !optional;
 }
 
+// main nav
+.navigation.menu--main-menu-wu 
+ul.menu {
+  li {
+      margin-bottom: 10px;
+      float: none;
+      font-size: 24px;
+     a {
+        color: $white;
+        font-size: 30px;
+        line-height: 1;
+        transition: all ease .5s;
+        &:hover {
+          color: $primary;
+          transform: scale(1.12);
+        }
+     }
+  }
+}
+
 // ------------------------------------------------------------------------
 // SECONDARY NAVS
 
