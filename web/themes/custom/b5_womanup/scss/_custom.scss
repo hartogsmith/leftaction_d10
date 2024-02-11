@@ -83,7 +83,11 @@ hr.divider {
 h2 {
   margin-top: $grid-gutter-width; 
   margin-bottom: $grid-gutter-width/2; 
-}
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 40px;
+  }
 h3 {
   margin-top: 20px; 
   margin-bottom: $grid-gutter-width/2; 
@@ -289,7 +293,7 @@ footer.main-footer-outer {
     font-weight: 400; 
     font-family: $font-family-sans-serif;
   }
-  .menu.nav {
+  .menu {
     margin: 0 0 (3 * $padding-base-vertical) 0;
     li {
         display: inline-block; 
@@ -318,7 +322,7 @@ footer.main-footer-outer {
         }
       }
     }
-    &.social {
+    .menu--social-wu .menu {
       margin: 40px 0 (3 * $padding-base-vertical) 0;
       li { 
 				font-size: 27px; 
@@ -336,6 +340,9 @@ footer.main-footer-outer {
 						color: $brand-secondary; 
 					}
         }
+        .fab::before,
+        .fas::before,
+        .far::before,
         .fa::before {
           line-height: 1.5; 
           font-size: 26px;
