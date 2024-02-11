@@ -6,23 +6,19 @@ theButton.addEventListener("click", (event) => {
 
 
 //use window.scrollY
-var scrollY = window.scrollY;
+var scrollpos = window.scrollY;
 
-function add_class_on_scroll() {
-    theNavbar.classList.add("fade-in");
-}
-
-function remove_class_on_scroll() {
-    theNavbar.classList.remove("fade-in");
+function toggle_class_on_scroll() {
+    theNavbar.classList.toggle("fade-in");
 }
 
 window.addEventListener('scroll', function(){ 
-    scrollY = window.scrollY;
-    if(scrollY > 10){
-        add_class_on_scroll();
+    scrollpos = window.scrollY;
+    if(scrollpos > 10){
+        toggle_class_on_scroll();
     }
     else {
-        remove_class_on_scroll();
+        toggle_class_on_scroll();
     }
-    console.log(scrollY);
+    console.log(scrollpos);
 });
