@@ -263,6 +263,12 @@ ul.menu {
   border: none;
   .fa-solid.fa-bars {
     font-size: 36px;
+    color: $secondary;
+    &:hover {
+      color: $white;
+    }
+  }
+  &.collapsed {
     color: $white;
     &:hover {
       color: $secondary;
