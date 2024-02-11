@@ -289,7 +289,7 @@ footer.main-footer-outer {
   background-color: $brand-primary;
   @extend .text-inverse !optional;
   color: $brand-secondary;
-  p, li, ol {
+  p, ol, ul, li {
     font-weight: 400; 
     font-family: $font-family-sans-serif;
   }
@@ -320,32 +320,32 @@ footer.main-footer-outer {
         }
       }
     }
-    .menu--social-wu .menu {
-      margin: 40px 0 (3 * $padding-base-vertical) 0;
-      text-align: right;
-      li { 
-				font-size: 27px; 
+  }
+  .menu--social-wu .menu {
+    margin: 40px 0 (3 * $padding-base-vertical) 0;
+    text-align: right;
+    li { 
+      font-size: 27px; 
+      display: inline-block;
+      a {
         display: inline-block;
-        a {
-          display: inline-block;
-          padding: 5px; 
-          span {
-          display: none; 
-          }
-          &a {
-            margin-left: 15px; 
-          }
-					&:hover {
-						color: $brand-secondary; 
-					}
+        padding: 5px; 
+        span {
+        display: none; 
         }
-        .fab::before,
-        .fas::before,
-        .far::before,
-        .fa::before {
-          line-height: 1.5; 
-          font-size: 26px;
+        &a {
+          margin-left: 15px; 
         }
+        &:hover {
+          color: $brand-secondary; 
+        }
+      }
+      .fab::before,
+      .fas::before,
+      .far::before,
+      .fa::before {
+        line-height: 1.5; 
+        font-size: 26px;
       }
     }
   }
