@@ -29,47 +29,28 @@
 				{{ page.home_jumbotron }}
 			{% endif %}
 
-
-			{% if page.home_block_1 or page.home_block_2 or page.home_block_3 %}
-			{% set home_blocks = 0 %}
 			{% if page.home_block_1 %}
-				{% set home_blocks = home_blocks + 1 %}
-			{% endif %}
-			{% if page.home_block_2 %}
-				{% set home_blocks = home_blocks + 1 %}
-			{% endif %}
-			{% if page.home_block_3 %}
-				{% set home_blocks = home_blocks + 1 %}
-			{% endif %}
-			{% set home_blocks = 12 / home_blocks %}
-			<!--<h1>home_blocks = {{ home_blocks }}</h1>-->
-			<div class="container">
-				<div class="row home-3">
-					{% if page.home_block_1 %}
-						<section class="home-block-1 col-md-{{ home_blocks }}">
-						<div class="inner">
+				<section class="home-block-1">
+					<div class="inner container">
 						{{ page.home_block_1 }}
-						</div>
-						</section>
-					{% endif %}
+					</div>
+				</section>
+			{% endif %}
 
-					{% if page.home_block_2 %}
-						<section class="home-block-2 col-md-{{ home_blocks }}">
-						<div class="inner">
+			{% if page.home_block_2 %}
+				<section class="home-block-2">
+					<div class="inner container">
 						{{ page.home_block_2 }}
-						</div>
-						</section>
-					{% endif %}	
+					</div>
+				</section>
+			{% endif %}	
 
-					{% if page.home_block_3 %}
-						<section class="home-block-3 col-md-{{ home_blocks }}">
-						<div class="inner">
+			{% if page.home_block_3 %}
+				<section class="home-block-3">
+					<div class="inner container">
 						{{ page.home_block_3 }} 
-						</div>
-						</section>
-					{% endif %}
-				</div>
-			</div>
+					</div>
+				</section>
 			{% endif %}
 
 		{% else %}
