@@ -276,21 +276,19 @@ figure {
 
 // ------------------------------------------------------------------------
 // FOOTER
-footer.main-footer {
+.footer-action + .main-footer-outer {
+  border-top: 5px solid $white;
+}
+
+footer.main-footer-outer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: $brand-primary;
-  //background-image: linear-gradient(rgba($brand-secondary, 0.9), rgba($brand-secondary, 0.7)), url('../images/bg-footer.jpg'); 
-  //background-image: url('../images/bg-footer.jpg'); 
-  //background-repeat: no-repeat;
-  //background-size: cover;
   @extend .text-inverse !optional;
   color: $brand-secondary;
   p, li, ol {
-    //font-size: 14px; 
     font-weight: 400; 
     font-family: $font-family-sans-serif;
-    //margin-bottom: $padding-base-vertical;
   }
   .menu.nav {
     margin: 0 0 (3 * $padding-base-vertical) 0;
@@ -299,7 +297,6 @@ footer.main-footer {
 			  @include media-breakpoint-down(sm) {
 			  }
       &+li {
-        //border-left: 1px sold $white;
           a {
           
           }
@@ -590,9 +587,7 @@ footer .footer-logo img {
 	}	
 }
 
-.footer-action + .main-footer {
-  border-top: 5px solid $white;
-}
+
 
 // ------------------------------------------------------------------------
 // HOME BLOCKS
