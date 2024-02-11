@@ -317,7 +317,7 @@ ul.menu {
   }
 }
 .page-container {
-  padding-top: 50px; // matches .shrink navbar height on interiors?
+  //padding-top: 50px; // matches .shrink navbar height on interiors?
   width: 100%;
   margin-left: auto; 
   margin-right: auto; 
@@ -862,12 +862,14 @@ section.home-block-2 {
   }
 }
 
-//  Home Donate Block
+//  swag
 section.home-block-3 {
-  background: $white url('../images/bg_texture-lt.jpg') repeat-x;
-  padding-top: 1em; 
-  padding-bottom: 3em; 
-	clear:both;
+  background: #1c1328 url(/themes/custom/b5_womanup/img/bg_swag.jpg) no-repeat top center;
+  background-size: contain;
+  height: 50vw;
+  max-height: 360px;
+  padding: 1.5em 0;
+}
 }
 //  Home Get Involved Block
 section.home-block-4 {
