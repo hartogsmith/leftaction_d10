@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log(`playedToday is ${ player.playedToday }`);
                     console.log(`You have already finished today's Furdle.  You can play again in ${ player.hms }`);
                 }
-                const shareImg = `/img/${ shareImages[player.noOfGuesses-1] }`;
+                const shareImg = `/themes/custom/b5_furdle/img/${ shareImages[player.noOfGuesses-1] }`;
                 overlayShareImg.setAttribute('src',shareImg);
                 overlayPlayedHeadline.textContent = `You have already finished today's Furdle.  You can play again in ${ player.hms }.`;
                 overlayPlayed.style.zIndex = '10';
