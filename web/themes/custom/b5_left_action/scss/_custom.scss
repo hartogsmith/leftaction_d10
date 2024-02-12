@@ -303,6 +303,9 @@ li a.active#navbar_toggle {
       }
     }
   }
+  &:focus {
+    box-shadow: none !important;
+  }
 }
 
 
