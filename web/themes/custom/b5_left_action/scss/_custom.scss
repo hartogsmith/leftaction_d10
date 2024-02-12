@@ -1070,7 +1070,12 @@ table.adminlist + a {
   padding-bottom: 20px; 
 }
 
-.front .list-txt h3 {
+.list-txt {
+  h3 {
   font-size: 21px;
   font-weight: 800;
+  }
+  &+.list-txt {
+    margin-top: .75rem;
+  }
 }
