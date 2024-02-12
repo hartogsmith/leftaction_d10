@@ -4,12 +4,12 @@ $legend-font-size: 1rem;
 $table-cell-padding-x: .75rem;
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
-$gray-100: #EEEEF6 !default;
+$white:    #FCF9F3 !default;
+$gray-100: #EEE5DB !default;
 $gray-200: #e9ecef !default;
-$gray-300: #CFCFBB !default;
+$gray-300: #E6D9CC !default;
 $gray-400: #ced4da !default;
-$gray-500: #334466 !default;
+$gray-500: #AA9988 !default;
 $gray-600: #6c757d !default;
 $gray-700: #334466 !default;
 $gray-800: #343a40 !default;
@@ -24,12 +24,12 @@ $gray-light:    $gray-300;
 $gray-lighter:  $gray-100;
 
 // scss-docs-start theme-color-variables
-$primary:         #222277 !default;   // the brighter
-$secondary:       #CC11AA !default;   // the darker
-$success:         #4C9F00 !default;
+$primary:         #664422 !default;   // the brighter
+$secondary:       #CC3300 !default;   // the darker
+$success:         #889933 !default;
 $info:            $gray-base !default;
-$warning:         #f0ad4e !default;
-$danger:          #d9534f !default;  
+$warning:         #EE9922 !default;
+$danger:          $secondary !default;  
 
 $brand-primary: $primary;
 $brand-secondary: $secondary;
@@ -94,3 +94,29 @@ $font-family-sans-serif:  niveau-grotesk, sans-serif !default;
 $font-family-serif:       niveau-grotesk-small-caps, sans-serif  !default;
 
 
+
+
+:root {
+    --white: #FCF9F3;
+    --black: #000000;
+    --green: #889933;
+    --yellow: #EE9922;
+    --red: #CC3300;
+    --dkBrown: #664422;
+    --brown: #AA9988;
+    --ltBrown: #E6D9CC;
+    --ltrBrown: #EEE5DB;
+    --dkBrownRGBA: rgba(102, 68, 34, 0.8);
+    --pageBG: #EEE5DB;
+    --bodyBG: linear-gradient(0deg, #EEE5DB 0%, #FCF9F3 100%);
+    --modalBG: linear-gradient(180deg, #FCF9F3 80.21%, #E6D9CC 100%);
+    --bodyFont: dovetail-mvb, serif;
+    --accentFont: chaloops,sans-serif;
+    --globalTrans: all ease-in .25s;
+    --tileSpacer: 3px;
+    --keySpacer: 4px;
+    --smPad: 10px;
+    --mdPad: 20px;
+    --lgPad: 30px;
+    --maxWidth: 440px;
+}
