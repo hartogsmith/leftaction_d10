@@ -697,10 +697,26 @@ body:not(.front) {
 .region-footer-signup {
   padding: 10px 0 30px; 
   background-color: $gray; 
+  .email-wrapper {
+    @include media-breakpoint-up(sm) {
+      padding-right: 0; 
+    }
+  }
+  .zip-wrapper {
+    @include media-breakpoint-up(sm) {
+      padding-right: 0; 
+      padding-left: 0; 
+    }
+  }
+  .submit-wrapper {
+    @include media-breakpoint-up(sm) {
+      padding-left: 0; 
+    }
+  }
   .submit-button {
     color: $white;
-    background-color: $primary;
-    border-color: $primary;
+    background-color: $primary !important;
+    border-color: $primary !important;
   }
   input[type="text"]::placeholder, input[type="email"]::placeholder {
     color: $gray-400 !important;
