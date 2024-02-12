@@ -103,42 +103,50 @@ html {
   }
 }
 
-h1, h2 {
-  letter-spacing: -.05em;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: niveau-grotesk,sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
   font-weight: 900;
   line-height: 1.1;
   color: #227;
 }
+
+a:link, a:visited {
+  color: var(--red) ;
+}
+
+a:hover, a:active {
+  color: var(--red) ;
+}
+
 h1 {
-  &.page-header {
-    margin-top: $grid-gutter-width; 
-		@include media-breakpoint-down(sm) {
-			font-size: 40px; 
-		}
-  }
+  text-transform: lowercase;
+  text-align: center;
 }
-hr.divider {
-		margin-top: $grid-gutter-width; 
-    border-top: 6px solid $white; 
-    margin-bottom: $grid-gutter-width;
-    opacity: 1;
-	
-}
+
 h2 {
-  margin-top: $grid-gutter-width; 
-  margin-bottom: $grid-gutter-width/2; 
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 40px;
-  }
-h3 {
-  margin-top: 20px; 
-  margin-bottom: $grid-gutter-width/2; 
+  text-align: center;
+  width: 100%;
 }
+
+h3 {
+  font-family: var(--bodyFont);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--dkBrown);
+  margin: var(--mdPad) 0  var(--smPad);
+}
+
+h4 {
+  font-family: var(--bodyFont);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 110%;
+  color: var(--dkBrown);
+}
+
+
 ol, ul {
   padding-left: 1.5em;
   .popover &:last-child {
