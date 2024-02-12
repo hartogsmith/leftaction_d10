@@ -754,8 +754,7 @@ ul.menu.footer-links {
 }
 
 .menu--footer-menu-la .menu {
-  //margin: 0 0 (3 * $padding-base-vertical) 0;
-  padding-left: 0;
+  text-align: left;
   li {
       display: inline-block; 
     &+li {
