@@ -5,7 +5,7 @@
     node.isSticky() ? 'is-sticky',
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
-    'clearfix',
+    'row',
   ]
 %}
 <article{{ attributes.addClass(classes, "wow fadeInUp") }}  data-wow-delay=".5s">
@@ -31,11 +31,11 @@
     </footer>
   {% endif %}
 
-  <div class="col-sm-12">
+  <div class="col-12">
     <hr class="divider"/>
 	</div>	
 
-  <div{{ content_attributes.addClass('content col-sm-6 col-xs-12 leftcol col-sm-push-6') }}>
+  <div{{ content_attributes.addClass('content col-sm-6 col-12 leftcol col-sm-push-6') }}>
 
     {# 
     RON: TO-DO:
