@@ -4,3 +4,4 @@ global-styling:
       css/style.css: {}
   js:
     js/load.js: {}
+    js/wow.min.js: {}
