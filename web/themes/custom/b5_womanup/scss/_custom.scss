@@ -18,9 +18,7 @@
 // ========================================================================
 // 1. RESETS & OVERRIDES
 // ========================================================================
-.wow {
-  visibility: hidden;
-}
+
 
 .btn-block {
   display: block;
@@ -53,7 +51,7 @@ body{
 	padding-right: $grid-gutter-width; 
 }
 .wow {
-  visibility: hidden;
+  //visibility: hidden;
 }
 
 
