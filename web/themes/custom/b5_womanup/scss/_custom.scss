@@ -23,6 +23,9 @@
 .btn-block {
   display: block;
 }
+#submit_button {
+  @extend .btn-block;
+}
 .btn-default {
   color: #ffffff;
   background-color: $secondary;
@@ -1846,5 +1849,12 @@ select#country {
       @extend .btn-default !optional; 
 			border-radius: 0 $border-radius $border-radius 0;
 		}
+  }
+}
+
+.disclainer {
+  font-style: italic;
+  p {
+    font-style: italic;
   }
 }
