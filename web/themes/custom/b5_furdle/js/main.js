@@ -283,14 +283,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const showEndMessage = (message) => {
         let headlineContent = '';
-        let endShareImg = `/img/${ shareImages[currentRow] }`;
+        let endShareImg = `/themes/custom/b5_furdle/img/${ shareImages[currentRow] }`;
         if(message === msgSuccessHeadline) {
             headlineContent = msgSuccessHeadline
             //messageContent = msgSuccessBody
         } else if(message === msgTryAgainHeadline) {
             headlineContent = msgTryAgainHeadline;
             overlayEndMessage.innerHTML = msgTryAgainBody;
-            endShareImg = `/img/${ shareImages[shareImages.length - 1] }`;
+            endShareImg = `/themes/custom/b5_furdle/img/${ shareImages[shareImages.length - 1] }`;
         }
         overlayEndHeadline.textContent = headlineContent;
         overlayEndShareImg.setAttribute('src',endShareImg);
