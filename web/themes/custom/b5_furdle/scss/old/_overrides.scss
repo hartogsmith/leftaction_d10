@@ -1,3 +1,23 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
 // STRUCTURE:
 //    ==================
 //    1. RESETS & OVERRIDES
@@ -15,41 +35,13 @@
 //    7. MISCELLANEOUS
 
 
+
+
+
 // ========================================================================
 // 1. RESETS & OVERRIDES
 // ========================================================================
-
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-#submit_button {
-  @extend .btn-block;
-}
-.btn-default {
-  color: #ffffff;
-  background-color: $secondary;
-  border-color: $secondary !important;
-  transition: all ease .5s; 
-  &:hover {
-    color: darken($brand-secondary, 20%);
-    border-color: darken($brand-secondary, 20%);
-  }
-}
-.img-responsive {
-  @extend .img-fluid;
-}
-.sr-only {
-  @extend .visually-hidden-focusable;
-}
-
 body{
-  font-family: niveau-grotesk,sans-serif;
-  font-size: 16px;
-  line-height: 1.67;
-  color: #227;
-  background-color: #222277;
   margin: 0;
 }
 .container .container {
@@ -59,6 +51,10 @@ body{
 	padding-left: $grid-gutter-width; 
 	padding-right: $grid-gutter-width; 
 }
+.wow {
+  visibility: hidden;
+}
+
 
 // ========================================================================
 // 2. TEXT, LINKS & TAGS
@@ -68,13 +64,13 @@ html {
   font-family: $font-family-serif; 
   // base font-weight
   font-weight: 300; // 300 because embedded typekit font is light vs book
-  @include media-breakpoint-up(sm) {
+  @media (min-width: $screen-sm-min) {
     font-size: 15px;
   }
-  @include media-breakpoint-up(md) {
+  @media (min-width: $screen-md-min) {
     font-size: 16px;
   }
-  @include media-breakpoint-up(lg) {
+  @media (min-width: $screen-lg-min) {
     font-size: 17px;
   }
 }
@@ -82,16 +78,10 @@ html {
 h1, h2 {
   letter-spacing: -.05em;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: niveau-grotesk,sans-serif;
-  font-weight: 900;
-  line-height: 1.1;
-  color: #227;
-}
 h1 {
   &.page-header {
     margin-top: $grid-gutter-width; 
-		@include media-breakpoint-down(sm) {
+		@media (max-width: $screen-xs-max) {
 			font-size: 40px; 
 		}
   }
@@ -100,17 +90,12 @@ hr.divider {
 		margin-top: $grid-gutter-width; 
     border-top: 6px solid $white; 
     margin-bottom: $grid-gutter-width;
-    opacity: 1;
 	
 }
 h2 {
   margin-top: $grid-gutter-width; 
   margin-bottom: $grid-gutter-width/2; 
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 40px;
-  }
+}
 h3 {
   margin-top: 20px; 
   margin-bottom: $grid-gutter-width/2; 
@@ -125,7 +110,7 @@ p.lead, div.lead p {
   font-size: $font-size-large; 
 	line-height: 1.67; 
   color: $gray-dark; 
-  @include media-breakpoint-up(lg) {
+  @media (min-width: $screen-lg-min) {
     font-size: 23px;
   }
 }
@@ -178,9 +163,9 @@ a {
 }
 // Image handling
 figure {
-  @extend .col-sm-12 !optional;
+  @extend .col-sm-12; 
   img {
-    @extend .img-responsive !optional;
+    @extend .img-responsive; 
     padding: ($padding-large-vertical *2) 0 $padding-base-vertical;
   }
 }
@@ -217,30 +202,9 @@ figure {
   // padding: 2px 8px;
 	letter-spacing: 0; // explicitly set to override NGP/EA/AN embeds 
 	transition: all ease-in-out .5s; 
-  margin-bottom: 0;
-  font-weight: 700;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 8px 8px;
-  font-size: 16px;
-  line-height: 1.67;
-  border-radius: 5px;
   &:hover {
-    color: #ffffff;
-    background-color: #414169;
-    border-color: #343453;
-    transform: scale(1.02);
+    @include scale(1.02); 
   }
-}
-.btn-info, .bigradio .form-type-radio label:hover {
-  color: #ffffff;
-  background-color: #558;
-  border-color: #4b4b78;
 }
 
 // ========================================================================
@@ -251,65 +215,9 @@ figure {
 
 // Breadcrumbs 
 #block-bys-breadcrumbs {
-	@extend .sr-only !optional;
+	@extend .sr-only; 
 }
 
-// main nav
-
-div#toolbar-administration {
-  z-index: 100000000; 
-}
-
-
-.navbar-main.bg-t {
-  background-color: transparent;
-  transition: all ease .5s;
-}
-
-.navbar-main.bg-t.open, .navbar-main.bg-t.fade-in {
-  background: $primary;
-}
-.navbar-main ul.menu {
-  margin-top: calc(2 * $spacer);
-  margin-bottom: calc(2 * $spacer);
-  li {
-    font-size: 36px;
-    font-weight: 700;
-     a {
-        color: $white;
-        transition: all 0.5s;
-        padding-top: 0.75em;
-        padding-bottom: 0.75em;
-        &:hover {
-          color: $secondary;
-          transform: scale(1.12);
-        }
-     }
-  }
-}
-.navbar-toggler {
-  padding: 0;
-  border: none;
-  .fa-solid.fa-bars {
-    font-size: 36px;
-    color: $secondary;
-    transition: all ease .5s;
-    &:hover {
-      color: $white;
-    }
-  }
-  &.collapsed {
-    .fa-solid.fa-bars {
-      color: $white;
-      &:hover {
-        color: $secondary;
-      }
-    }
-  }
-  &:focus {
-    box-shadow: none !important;
-  }
-}
 // ------------------------------------------------------------------------
 // SECONDARY NAVS
 
@@ -349,14 +257,13 @@ div#toolbar-administration {
   }
 }
 .page-container {
-  //padding-top: 50px; // matches .shrink navbar height on interiors?
-  width: 100%;
+  padding-top: 50px; // matches .shrink navbar height on interiors?
+  //max-width: 1600px; 
   margin-left: auto; 
   margin-right: auto; 
   background-color: $gray-lighter;
 	background: linear-gradient(to bottom, $white, $gray-lighter 200px); 
-  
-  @include media-breakpoint-down(sm) {
+  @media (max-width: $screen-xs-max) {
     // padding-top: 60px;
   }
   // Action Block - 3 action btns at the bottom of some interiors
@@ -373,72 +280,81 @@ div#toolbar-administration {
 
 .region-highlighted > div {
 	background: $brand-warning; 
-	border-radius: $border-radius-lg; 
-	@extend .text-inverse !optional;
+	border-radius: $border-radius-large; 
+	@extend .text-inverse; 
 	padding: $grid-gutter-width/2;
   margin-bottom: $grid-gutter-width;
 }
 
 // ------------------------------------------------------------------------
 // FOOTER
-.footer-action + .main-footer-outer {
-  border-top: 5px solid $white;
-}
-footer.main-footer-outer {
+footer.main-footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: $brand-primary;
-  @extend .text-inverse !optional;
+  //background-image: linear-gradient(rgba($brand-secondary, 0.9), rgba($brand-secondary, 0.7)), url('../images/bg-footer.jpg'); 
+  //background-image: url('../images/bg-footer.jpg'); 
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  @extend .text-inverse; 
   color: $brand-secondary;
-  p, ol, ul, li {
+  p, li, ol {
+    //font-size: 14px; 
     font-weight: 400; 
     font-family: $font-family-sans-serif;
+    //margin-bottom: $padding-base-vertical;
   }
-  .menu--footer-menu-wu .menu {
-    //margin: 0 0 (3 * $padding-base-vertical) 0;
-    padding-left: 0;
+  .menu.nav {
+    margin: 0 0 (3 * $padding-base-vertical) 0;
     li {
         display: inline-block; 
+			  @media (max-width: $screen-xs-max) {
+			  }
       &+li {
-          border-left: 1px solid;
-          margin-left: 15px;
-          padding-left: 15px;
+        //border-left: 1px sold $white;
+          a {
+          
+          }
         }
       a {
         display: inline-block;
+        margin-left: 15px;
         padding: 0;
-        text-decoration: underline;
+        font-weight: 700;
+        text-transform: uppercase;
         &:hover {
+            // text-decoration: underline;
             background-color: $t;
-            color: $brand-secondary;
+            color: $brand-primary;
         }
         &:focus {
+            // text-decoration: underline;
             background-color: $t;
             color: darken($brand-secondary, 20%);
         }
       }
     }
-  }
-  .menu--social-wu .menu {
-    //margin: 40px 0 (3 * $padding-base-vertical) 0;
-    padding-left: 0;
-    text-align: right;
-    li { 
-      font-size: 27px; 
-      display: inline-block;
-      &+li {
-        margin-left: 15px; 
-      }
-      a {
+    &.social {
+      margin: 40px 0 (3 * $padding-base-vertical) 0;
+      li { 
+				font-size: 27px; 
         display: inline-block;
-        padding: 5px; 
-        line-height: 1.5; 
-        font-size: 26px;
-        span {
-          transition: all ease .5s;
-          &:hover{
-            color: $brand-secondary; 
+        a {
+          display: inline-block;
+          padding: 5px; 
+          span {
+          display: none; 
           }
+          &a {
+            margin-left: 15px; 
+          }
+					&:hover {
+						color: $brand-secondary; 
+					}
+        }
+        .fa::before {
+          line-height: 1.5; 
+          font-size: 26px;
         }
       }
     }
@@ -447,7 +363,7 @@ footer.main-footer-outer {
   // generalized treatment for any menu placed in footer upper right
   .region-footer-upper-right nav {
     ul.menu.nav {
-      @extend .nav-stacked !optional;
+      @extend .nav-stacked; 
       &.Xsocial{
         li { 
           a span {
@@ -465,7 +381,7 @@ footer.main-footer-outer {
         color: $brand-primary ; 
         &:hover {
           color: $brand-secondary;
-          //@include scale(1.08); 
+          @include scale(1.08); 
         }
         &.btn-donate {
           padding: 4px 6px; 
@@ -482,7 +398,7 @@ footer.main-footer-outer {
   }
 	.region-footer-upper-left {
 		padding: 0 0 15px; 
-		@include media-breakpoint-up(sm) {
+		@media (min-width: $screen-sm-min) {
 			padding: 30px 0 0; 
 		}
 		strong {
@@ -500,7 +416,7 @@ footer.main-footer-outer {
 			transition: all ease-in-out .5s; 
 			&:hover {
 				opacity: 1; 
-        //@include scale(1.2); 
+        @include scale(1.2); 
 			}
 		}
 	}
@@ -530,19 +446,19 @@ footer.main-footer-outer {
 		max-width: 160px; 
 		height: auto; 
 		&:hover {
-			//@include scale(1.05);
+			@include scale(1.05);
 		}
 	}
 }
 body.path-frontpage header a.logo img {
-  @include media-breakpoint-down(sm) {
+  @media (max-width: $screen-xs-max) {
     //filter: drop-shadow(1px 3px 3px transparentize($brand-secondary, .5) ); 
   }
 }
 footer .footer-logo img {
   //margin: $grid-gutter-width auto;
 	max-width: 160px; 
-  @include media-breakpoint-down(sm) {
+  @media (max-width: $screen-xs-max) {
   }
   &:hover {
    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); 
@@ -558,7 +474,7 @@ footer .footer-logo img {
 #navbar.shrink .logo img {
   //height: 45px; 
 	//margin-top: 0; 
-  @include media-breakpoint-up(sm) {
+  @media (min-width: $screen-sm-min) {
     //height: 50px; 
   }
 }
@@ -569,7 +485,8 @@ footer .footer-logo img {
 
   overflow: hidden;
   position: relative; 
-  @extend .text-inverse !optional;
+  // @extend .container-fluid; 
+  @extend .text-inverse; 
   padding-top: ($padding-large-vertical *2) ; 
   padding-bottom: ($padding-large-vertical *2) ; 
   h2 {
@@ -579,54 +496,54 @@ footer .footer-logo img {
     text-align: center; 
   }
 	.bsd-signup-2 {
-		@extend .row !optional;
+		@extend .row; 
 		padding-bottom: 3em;  
 		div.email-wrapper {
-			@extend .col-sm-6 !optional;
+			@extend .col-sm-6;  
 			//padding-bottom: $padding-large-vertical; 
-			@include media-breakpoint-up(sm) {
+			@media (min-width: $screen-sm-min) {
 			  padding-right: 0; 	
 			}
 			input#email {
-				@extend .form-control !optional;
-  			@extend .input-lg !optional;
-			  border-radius: $border-radius-lg $border-radius-lg 0 0 ; 
+				@extend .form-control; 
+  			@extend .input-lg; 
+			  border-radius: $border-radius-large $border-radius-large 0 0 ; 
 				border-right: 1px solid $brand-secondary; 
-  			@include media-breakpoint-up(sm) {
-  				border-radius: $border-radius-lg 0 0 $border-radius-lg; 
+  			@media (min-width: $screen-sm-min) {
+  				border-radius: $border-radius-large 0 0 $border-radius-large; 
 				}
 			}
 		}
 		div.zip-wrapper {
-			@extend .col-sm-4 !optional;
-			@extend .col-6 !optional;
-			@extend .nopad-right !optional;
-			@include media-breakpoint-up(sm) {
-			  padding-left: 0;
+			@extend .col-sm-4; 
+			@extend .col-xs-6; 
+			@extend .nopad-right; 
+			@media (min-width: $screen-sm-min) {
+			  padding-left: 0; 	
 			}
 			input#zip {
-				@extend .form-control !optional;
-				@extend .input-lg !optional;
- 				border-radius: 0 0 0 $border-radius-lg; 
+				@extend .form-control; 
+				@extend .input-lg; 
+ 				border-radius: 0 0 0 $border-radius-large; 
 				//border-right: 1px solid $brand-secondary; 
-  			@include media-breakpoint-up(sm) {
+  			@media (min-width: $screen-sm-min) {
   				border-radius: 0; 
 				}
 			}
 		}
 		div.submit-wrapper {
-			@extend .col-sm-2 !optional;
-			@extend .col-6 !optional;
-			@extend .nopad-left !optional;
+			@extend .col-sm-2; 
+			@extend .col-xs-6; 
+			@extend .nopad-left; 
 			input#submit_button {
-				@extend .form-control !optional;
-				@extend .btn-lg !optional;
-				@extend .btn !optional;
-				@extend .btn-primary !optional;
-				@extend .input-lg !optional;
-				border-radius: 0 0 $border-radius-lg 0; 
-  			@include media-breakpoint-up(sm) {
-					border-radius: 0 $border-radius-lg $border-radius-lg 0; 
+				@extend .form-control; 
+				@extend .btn-lg; 
+				@extend .btn; 
+				@extend .btn-primary; 
+				@extend .input-lg; 
+				border-radius: 0 0 $border-radius-large 0; 
+  			@media (min-width: $screen-sm-min) {
+					border-radius: 0 $border-radius-large $border-radius-large 0; 
 				}
 			}
 		}
@@ -645,7 +562,7 @@ footer .footer-logo img {
 			span {
 				display: none;
 			}
-			@include media-breakpoint-up(md) {
+			@media (min-width: $screen-md-min) {
 				span {
 					display: block;
 					//margin-top: -3px;
@@ -665,12 +582,12 @@ footer .footer-logo img {
 	padding-bottom: 0;
   background: $brand-secondary;
   position: relative;
-  @extend .text-inverse !optional;
+  @extend .text-inverse;
   .region.region-footer-action {
     position: relative;
-	  @extend .container !optional;  
+	  @extend .container;  
     h2 {
-      @extend .text-center !optional;
+      @extend .text-center; 
     }
 	}
 	.arrow-wrapper {
@@ -686,7 +603,9 @@ footer .footer-logo img {
 	}	
 }
 
-
+.footer-action + .main-footer {
+  border-top: 5px solid $white;
+}
 
 // ------------------------------------------------------------------------
 // HOME BLOCKS
@@ -698,10 +617,10 @@ footer .footer-logo img {
   overflow: hidden; 
   position: relative; 
   //background: $white; 
-  @include media-breakpoint-up(md) {
+  @media (min-width: $screen-md-min) {
     max-height: 57vw; 
   }
-  @include media-breakpoint-up(lg) {
+  @media (min-width: $screen-lg-min) {
     max-height: 60vh;  
   }
   img {
@@ -709,36 +628,36 @@ footer .footer-logo img {
     width: auto; 
     object-position: -110vw 0; 
     object-fit: cover; 
-    @include media-breakpoint-up(sm) {
+    @media (min-width: $screen-sm-min) {
       width: 100%; 
       height: auto;
       object-position: 50% 50%;  
     }
-    @include media-breakpoint-up(md) {
+    @media (min-width: $screen-md-min) {
       object-position: 0 0;  
     }
-    @include media-breakpoint-up(lg) {
+    @media (min-width: $screen-lg-min) {
       // object-position: 0 -5vw;  
     }
   }
   .pin-bottom {
     //background: linear-gradient(transparentize($gray-darker, 1), transparentize($gray-darker, .2) );
-    @extend .text-inverse !optional;
+    @extend .text-inverse;
     position: absolute;
     bottom: 0;
     left: 0;
     padding-bottom: ($grid-gutter-width *1.5); 
-    @include media-breakpoint-up(sm) {
+    @media (min-width: $screen-sm-min) {
     	padding-bottom: ($grid-gutter-width /2); 
 		}
-    @include media-breakpoint-up(lg) {
+    @media (min-width: $screen-lg-min) {
 			.container-fluid > .row {
         max-width: 930px;
         margin: 0 auto;	
 			}
 		}
 	}
-	.credit {
+	div.field--name-field-photo-credit {
 		position:absolute; 
 		bottom: 5px; 
 		right: 5px; 
@@ -780,14 +699,14 @@ footer .footer-logo img {
 .path-frontpage h1 {
   margin-bottom: 1em; 
   font-size: 11vw; 
-  @include media-breakpoint-up(sm) {
+  @media (min-width: $screen-sm-min) {
     font-size: 10vw; 
     margin-bottom: .5em; 
   }
-  @include media-breakpoint-up(md) {
+  @media (min-width: $screen-md-min) {
     font-size: 9vw; 
   }
-  @include media-breakpoint-up(lg) {
+  @media (min-width: $screen-lg-min) {
     font-size: 105px; 
   }
 }
@@ -801,22 +720,22 @@ footer .footer-logo img {
 	#can_embed_form {
 		padding-top: 20px; 
 		form {
-			@include media-breakpoint-up(sm) {
+			@media (min-width: $screen-sm-min) {
 				width: 90%; 
 				margin: 0 auto; 
 			}
-			@include media-breakpoint-up(md) {
+			@media (min-width: $screen-md-min) {
 				width: 80%; 
 			}
 		}
 		#form_col1 {
-			@include media-breakpoint-up(sm) {
+			@media (min-width: $screen-sm-min) {
 				width: 80% !important; 
 			}
 			.floatlabel-wrapper {
 				width: 35%; 
 				margin: 0; 
-				@include media-breakpoint-up(sm) {
+				@media (min-width: $screen-sm-min) {
 					width: 33%; 
 					margin-right: 2%; 
 				}
@@ -835,7 +754,7 @@ footer .footer-logo img {
 			}
 		}
 		#form_col2 {
-			@include media-breakpoint-up(sm) {
+			@media (min-width: $screen-sm-min) {
 				width: 20% !important; 
 			}
 			margin: 0; 
@@ -863,7 +782,7 @@ section.home-block-1 {
   }
 	.view-content {
     @extend .row; 
-    @include media-breakpoint-up(lg) {
+    @media (min-width: $screen-lg-min) {
 	  }
 	}
 }
@@ -873,13 +792,13 @@ a.featured-action {
 	  transition: ease-in-out .3s; 
 	}
 	&:hover {
-	  //@include scale(1.02);
+	  @include scale(1.02);
 		h3, h4 {
 			color: $brand-secondary !important; 
 		}
 	}
 	.key-image-wrapper { // unscoped for show all page also
-		border-radius: $border-radius-lg $border-radius-lg 0 0; 
+		border-radius: $border-radius-large $border-radius-large 0 0; 
 		overflow: hidden;
 		img {
 			@extend .img-responsive; 
@@ -893,6 +812,14 @@ section.home-block-2 {
   padding-bottom: 2em; 
   #block-homeabout {
   }
+}
+
+//  Home Donate Block
+section.home-block-3 {
+  background: $white url('../images/bg_texture-lt.jpg') repeat-x;
+  padding-top: 1em; 
+  padding-bottom: 3em; 
+	clear:both;
 }
 //  Home Get Involved Block
 section.home-block-4 {
@@ -912,6 +839,35 @@ section.home-block-5 {
 	padding-bottom: $padding-large-vertical * 2;
   // N.B. Tweet Carousel styling in tweet-carousel.scss 
 }
+/* this needs to be scoped, conflicting w/ social in footer */
+/*#block-social {
+  padding-bottom: $padding-large-vertical * 3;
+  padding-top: $padding-large-vertical ; 
+  @extend .text-center;
+  
+  h2#block-social-menu {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    margin-top: 0; 
+  }
+  
+  a.fa.c-menu-social__item {
+    font-size: 36px; 
+    transition: all, .5s; 
+    margin-left: 10px;
+    margin-right: 10px;
+    &:hover {
+      background-color: transparent;
+      color: $brand-secondary; 
+    }
+  }
+}*/
+// Home Donate Jumpstart 
+/*.home-donate {
+  padding-bottom: $padding-large-vertical * 3; 
+}*/
 // Home Social Feed
 section.home-block-5 {
   background: $gray url('../images/bg_wood.jpg');
@@ -920,10 +876,10 @@ section.home-block-5 {
 }
 
 // SWAG 
-section.home-block-3 {
-  background: #1c1328 url(/themes/custom/b5_womanup/img/bg_swag.jpg) no-repeat top center;
+.home-block-6 {
+  background: #1c1328 url('../images/bg_swag.jpg') no-repeat top center; 
   background-size: contain;
-  @extend .text-inverse !optional; 
+  @extend .text-inverse; 
   height: 50vw; 
   max-height: 360px; 
   padding: 1.5em 0; 
@@ -932,13 +888,13 @@ section.home-block-3 {
     font-weight: 700; 
     font-size: 26px; 
     line-height: 1; 
-    @include media-breakpoint-up(sm) {
+    @media (min-width: $screen-sm-min) {
       padding-top: 1em;  
       font-size: 40px; 
     }
     .btn {
       margin-top: 1em; 
-      @include media-breakpoint-up(sm) {
+      @media (min-width: $screen-sm-min) {
         font-size: 22px; 
       }
     }
@@ -973,7 +929,7 @@ section.home-block-3 {
     transition: all 0.3s ease-out; */ 
   transition: all ease-in-out .5s; 
   @extend .btn; 
-  @extend .btn-default !optional; 
+  @extend .btn-default; 
   // @extend .btn-lg; 
   min-width: 55px; 
   font-size: 18px; 
@@ -996,13 +952,13 @@ section.home-block-3 {
 // ISSUE SELECT 
 .issue-select-wrapper {
 	@extend .col-sm-10; 
-	@extend .offset-sm-1;
+	@extend .col-sm-offset-1;
 	@extend .col-md-8; 
-	@extend .offset-md-2; 
+	@extend .col-md-offset-2; 
 }
 select#issue_selector, 
 select#issue_selector option#start {
-	border-radius: $border-radius;
+	border-radius: $border-radius-base;
 	background: $brand-primary;
 	color: $gray-lighter;
 	font-size: 20px;
@@ -1038,8 +994,36 @@ select#issue_selector option:not(#start) {
     // padding-bottom: 3vw !important;  
   }
 }
+// HERO Block -- consolodate interior header & jumbotron
+/* #block-interiorherosignup,
+#block-hero-signup {
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center bottom !important;
+  @extend .text-center;  
+} */
+
 .main-container.container {
   position: relative; 
+	// overflow: hidden; // may be needed but is conflicting with card scalin on hover
+  /*&::before {
+    content: "";
+    display: block; 
+    background: radial-gradient(at top , transparentize(#fff,.2), transparentize(#fff,.4), transparentize(#fff, 1), transparentize(#fff, 1) );
+    position: absolute; 
+    top: 0; 
+    width: 100%;
+    height: 67vh; 
+    @media (min-width: $screen-sm-min) {
+      height: 40vh;
+    }
+    @media (min-width: $screen-md-min) {
+      height: 30vh;
+    }
+  }*/
+  .content {
+    // @extend .row; 
+  }
 }
 
 
@@ -1111,8 +1095,8 @@ body:not(.path-frontpage) {
   }
   #block-pagesectionshareheader {
     @extend .col-sm-6; 
-    @extend .right !optional; 
-    @include media-breakpoint-down(sm) {
+    @extend .right; 
+    @media (max-width: $screen-xs-max) {
       margin-top: $padding-large-vertical; 
     }
   }
@@ -1135,7 +1119,9 @@ body.page-node-type-article {
     margin-bottom: 0; 
   }
   article {
+    // @extend .row; 
     padding-top: $padding-large-vertical *2;
+    // background: radial-gradient(at top , transparentize($brand-secondary,.8), transparentize($brand-secondary,.9), transparentize($brand-secondary, 1), transparentize($brand-secondary, 1) );
     footer {
       display: none; 
     }
@@ -1188,7 +1174,7 @@ body.path-issues {
       // background: radial-gradient(at top , transparentize($brand-secondary,.8), transparentize($brand-secondary,.9), transparentize($brand-secondary, 1), transparentize($brand-secondary, 1) );
       padding-top: 45px;
       h3, h4, h5, p.body-text {
-        @include media-breakpoint-up(sm) {
+        @media (min-width: $screen-sm-min) {
           padding-left: 25%; 
         }
       }
@@ -1198,7 +1184,7 @@ body.path-issues {
     margin-top: ($padding-large-vertical * 2); 
     margin-bottom: ($padding-large-vertical * -3);
     
-    @include media-breakpoint-down(sm) {
+    @media (max-width: $screen-xs-max) {
       // background-size: 100%;
       // padding-bottom: 70vw; 
       background: radial-gradient(at top , transparentize($brand-secondary,.8), transparentize($brand-secondary,.9), transparentize($brand-secondary, 1), transparentize($brand-secondary, 1) );
@@ -1225,6 +1211,9 @@ body.path-issues {
     }
   }
 }
+
+
+
 
 // Help region.
 .region-help {
@@ -1274,10 +1263,10 @@ body.path-issues {
 }
 
 ul.sp-list {
-  @extend .col-10; 
-  @extend .offset-1; 
+  @extend .col-xs-10; 
+  @extend .col-xs-offset-1; 
   @extend .col-md-8; 
-  @extend .offset-md-2; 
+  @extend .col-md-offset-2; 
   margin-top: 40px;
   padding: 0 0; 
   s {
@@ -1304,6 +1293,10 @@ ul.sp-list {
     }
   }
 }
+
+
+
+
 
 /* add/edit endorsement public page */
 .container.add-endorsement {
@@ -1353,7 +1346,7 @@ ul.sp-list {
 // ========================================================================
 
 input#edit-zip, input#edit-zip--2 { 
-  @include media-breakpoint-up(sm) {
+  @media (min-width: $screen-sm-min) {
     width: 120px;
   }
 }
@@ -1375,7 +1368,7 @@ input#edit-zip, input#edit-zip--2 {
 }
 
 .at .content.thankYou {
-  @extend .well !optional;
+  @extend .well;
 }
 
 
@@ -1440,7 +1433,7 @@ body.page-node-type-action {
 [class^="col-"] {
   &.views-row {
     margin-bottom: 20px; 
-	  @include media-breakpoint-down(sm) {
+	  @media (max-width: $screen-xs-max) {
 		  margin-bottom: $grid-gutter-width * 1.5; 	
 		}
     h3 {
@@ -1496,7 +1489,7 @@ body.page-node-type-action {
     // margin-top: -10px; 
     // margin-bottom: 40px; 
     &:hover {
-      //@include scale(1.03); 
+      @include scale(1.03); 
     }    
     .summary {
       // opacity: 1; 
@@ -1588,7 +1581,7 @@ bodyX {
       margin-top: 38px !important;
     }	
 		&.toolbar-tray-open {
-	    @include media-breakpoint-up(md) {
+	    @media (min-width: $screen-md-min) {
 				header#navbar { 
 					margin-top: 79px !important; 
 				}
@@ -1604,7 +1597,7 @@ bodyX {
     }	
 	#toolbar-administration {
 		font-size: .8em !important; 
-    @include media-breakpoint-down(md) {
+    @media (max-width: $screen-md-min) {
       position: fixed;
       top: 0;
       right: 0;
@@ -1628,19 +1621,19 @@ nav.tabs {
 
 /* CLEANING CLASSES FROM MARKUP, WOW/ANI STUFF ADDED IN WOW INIT */
 .navbar-header-left {
-  //@extend .col-6;
+  @extend .col-xs-6;
   @extend .text-left;
 }
 .navbar-header-right {
-  //@extend .col-6;
+  @extend .col-xs-6;
   @extend .text-right;
 }
 .navbar-collapse-left { 
-  //@extend .col-sm-12;
+  @extend .col-sm-12;
   @extend .text-center;
 }
 .navbar-collapse-right { 
-  //@extend .col-sm-12;
+  @extend .col-sm-12;
   @extend .text-center;
 }
 .block-header {
@@ -1649,22 +1642,22 @@ nav.tabs {
   @extend .text-center;
 }
 .footer-upper-left {
-	//@extend .col-sm-6; 
+	@extend .col-sm-6; 
 } 
 .footer-upper-right {
   @extend .text-sm-right;
-	//@extend .col-sm-6; 
+	@extend .col-sm-6; 
 } 
 .footer-center-center {
   @extend .text-center;
 }
 .footer-lower-left {
   @extend .text-left;
-	//@extend .col-sm-8; 
+	@extend .col-sm-8; 
 }
 .footer-lower-right {
   @extend .text-right;
-	//@extend .col-sm-4; 
+	@extend .col-sm-4; 
 }
 .footer-bottom-center {
   @extend .text-center;
@@ -1695,9 +1688,9 @@ body.page-node-type-action {
 		h2 {
 			margin: 0; 
 			padding: 15px; 
-			background: $primary;
+			background: $gray-dark;
 			color: $white; 
-			border-radius: $border-radius-lg $border-radius-lg 0 0; 
+			border-radius: $border-radius-large $border-radius-large 0 0; 
 			font-family: $font-family-serif; 
 			text-align: center; 
 			letter-spacing: 0; 
@@ -1716,7 +1709,7 @@ body.page-node-type-action {
       @extend .btn;
       @extend .btn-block;
 		 @extend .btn-lg; 
-		 @extend .btn-default !optional; 
+		 @extend .btn-default; 
     } 
     input[type="radio"], input[type="checkbox"] {
       display: inline; 
@@ -1749,7 +1742,7 @@ body.page-node-type-action {
     color: $gray; 
     border-top: 1px solid $gray-light;
     border-bottom: 1px solid $gray-light; 
-    @include media-breakpoint-down(md) {
+    @media (min-width: $screen-md-min)  {
       height: 600px; 
     }
   }
@@ -1767,8 +1760,8 @@ body.page-node-type-action {
       padding: 0 8px;
       vertical-align: top;
       border-bottom:1px dashed $gray-light;
-			border-radius: $border-radius; 
-      @include media-breakpoint-up(sm) {
+			border-radius: $border-radius-base; 
+      @media (min-width: $screen-sm-min)  {
         display: inline-block;
         height: 150px;
         padding: 8px;
@@ -1777,10 +1770,10 @@ body.page-node-type-action {
         background-color: transparentize($gray-light, .5) ;
         border-bottom:none;
       }
-      @include media-breakpoint-down(md) {
+      @media (min-width: $screen-md-min)  {
         width: 22% !important;
       }
-      @include media-breakpoint-up(lg) {
+      @media (min-width: $screen-lg-min)  {
         width: 17.5% !important;
       }
       /* OLD 
@@ -1822,46 +1815,34 @@ select#country {
 
 #search-block-form {
   @extend .row; 
-	@include media-breakpoint-down(sm) {
+	@media (max-width: $screen-xs-max) {
 		margin-top: 30px; 
 	}
   .form-item-keys {
-      @extend .col-8;  
+      @extend .col-xs-8;  
 		@extend .nopad-right; 
-      @include media-breakpoint-up(sm) {
+      @media (min-width: $screen-sm-min) {
         padding-right: 0;   
       }
 		#edit-keys {
       @extend .form-control; 
-      @extend .input-sm !optional;
-      border-radius: $border-radius 0 0 $border-radius; 
+      @extend .input-sm; 
+      border-radius: $border-radius-base 0 0 $border-radius-base; 
     }
   }
 
   .form-actions {
-    @extend .col-4;  
+    @extend .col-xs-4;  
 		@extend .nopad-left; 
     #edit-submit {
-      @include media-breakpoint-up(sm) {
+      @media (min-width: $screen-sm-min) {
   
       }
       @extend .btn;
       @extend .btn-block;
       @extend .btn-sm; 
-      @extend .btn-default !optional; 
-			border-radius: 0 $border-radius $border-radius 0;
+      @extend .btn-default; 
+			border-radius: 0 $border-radius-base $border-radius-base 0;
 		}
-  }
-}
-
-.disclainer {
-  font-style: italic;
-  p {
-    font-style: italic;
-  }
-}
-.footer-action {
-  input[type="text"]::placeholder, input[type="email"]::placeholder {
-    color: $gray-300 !important;
   }
 }
