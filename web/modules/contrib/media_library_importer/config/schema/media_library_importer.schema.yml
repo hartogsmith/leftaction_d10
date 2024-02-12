@@ -1,0 +1,31 @@
+# Schema for media_library_importer module.
+
+media_library_importer.settings:
+  type: config_object
+  label: 'Media Library Importer settings'
+  mapping:
+    exclude_styles:
+      type: boolean
+      label: 'Exclude styles folder'
+    import_unmanaged_files:
+      type: boolean
+      label: 'Import unmanaged files'
+    import_files_to_media_location:
+      type: boolean
+      label: 'Import files to location set in media'
+      description: 'This will create multiple copies of the file.'
+    import_folder:
+      type: string
+      label: 'Import from Folder:'
+    media_types_import:
+      type: sequence
+      label: 'Media Types to Import'
+      description: 'Media Types that will be included during import. File extensions will be used from valid extensions.'
+      sequence:
+        type: string
+    media_types_fields:
+      type: sequence
+      label: 'Media Types Fields'
+      description: 'Set the field machine name that holds the media content for each enabled Media Type.'
+      sequence:
+        type: string
