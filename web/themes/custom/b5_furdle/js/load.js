@@ -26,7 +26,7 @@ window.addEventListener('scroll', function(){
     else {
         remove_class_on_scroll();
     }
-    console.log(scrollpos);
+    //console.log(scrollpos);
 });
 
 var wow = new WOW(
@@ -44,7 +44,4 @@ var wow = new WOW(
     }
   );
   
-jQuery(document).ready(function() { // add classes and data-based timing
-    //jQuery('navbar-header-left, navbar-header-right').addClass('wow');
-    wow.init(); // last!
-});
+wow.init();
