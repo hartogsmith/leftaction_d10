@@ -76,26 +76,9 @@
 			<div id="main_content" role="main" class="main-container-outer js-quickedit-main-content">
 
 
-				<div class="main-container" >
+				<div class="main-container container">
 					{# Interior #}
-
-					{# Sidebar First #}
-					{% if page.sidebar_first %}
-						<aside class="col col-sm-6" role="complementary">
-						{{ page.sidebar_first }}
-						</aside>
-					{% endif %}
-
-					{# Content #}
-					{%
-					set content_classes = [
-					page.sidebar_first and page.sidebar_second ? 'col col-sm-6',
-					page.sidebar_first and page.sidebar_second is empty ? 'col col-sm-6',
-					page.sidebar_second and page.sidebar_first is empty ? 'col col-sm-9',
-					page.sidebar_first is empty and page.sidebar_second is empty ? 'col col-sm-12'
-					]
-					%}
-					<section{{ content_attributes.addClass(content_classes) }}>
+					<section>
 
 						{# Highlighted #}
 						{% if page.highlighted %}
@@ -123,15 +106,6 @@
 						{{ page.content }}
 
 					</section>
-
-
-
-					{# Sidebar Second #}
-					{% if page.sidebar_second %}
-					<aside class="col col-sm-3" role="complementary">
-					{{ page.sidebar_second }}
-					</aside>
-					{% endif %}
 					
 				</div>
 			</div><!-- /main-container -->
