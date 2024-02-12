@@ -754,7 +754,7 @@ ul.menu.footer-links {
 }
 
 .menu--footer-menu-la .menu {
-  text-align: left;
+  text-align: right;
   li {
       display: inline-block; 
     &+li {
@@ -845,12 +845,12 @@ ul.shares{
 // added input-lg, 
 // 
 #search-block-form { 
-  .form-text {
+  .form-text, #edit-keys {
     // @extend .input-lg; // if we don't want to use, let's standardize somehow; the one-off special cases kill us
     @extend .form-control;
     font-size: inherit; 
   }
-  .btn {
+  .btn, #edit-submit {
     // @extend .btn-lg;   // if we don't want to use, let's standardize somehow; the one-off special cases kill us
     @extend .form-control;
     font-size: inherit; 
