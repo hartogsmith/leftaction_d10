@@ -680,6 +680,7 @@ body:not(.front) {
   background: $gray-darker;
 }
 
+.footer-action,
 .region-footer-action,
 .region-footer-signup {
   padding: 10px 0 30px; 
@@ -705,6 +706,9 @@ body:not(.front) {
   }
   .submit-button {
     // background-color: $brand-secondary; 
+  }
+  input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: $gray-300 !important;
   }
 }
 .region-footer-upper-right {
