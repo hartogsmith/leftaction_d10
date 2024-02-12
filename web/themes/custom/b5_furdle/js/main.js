@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
     // display total games played, grab from: 
     let gameCountRequest = new XMLHttpRequest();
-    gameCountRequest.open('GET', '/php/player_count.txt', true);
+    gameCountRequest.open('GET', '/themes/custom/b5_furdle/php/player_count.txt', true);
 
     gameCountRequest.onload = function() {
         if (gameCountRequest.status >= 200 && gameCountRequest.status < 400) {
