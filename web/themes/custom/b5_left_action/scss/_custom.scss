@@ -702,6 +702,10 @@ body:not(.front) {
     // background-color: $brand-secondary; 
   }
 }
+.region-footer-upper-right {
+  display: flex;
+  justify-content: flex-end;
+}
 .region-footer-upper-left {
   @extend .text-inverse;
 }
