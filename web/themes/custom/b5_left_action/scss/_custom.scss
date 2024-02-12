@@ -352,6 +352,7 @@ li a.active#navbar_toggle {
 ul.menu { 
 	list-style: none;
 	padding-left: 0;
+  margin-left: 0;
 	// margin-left: 0;
 	li{
 		list-style: none;
@@ -360,17 +361,6 @@ ul.menu {
 	}
 	a {
 		text-decoration: none;
-	}
-	&.social-links {
-		a {
-			padding: .5em;
-		}
-		&.fa {
-			text-display: none;
-		}
-		li + li {
-			margin-left: .5em;
-		}
 	}
   .sr-only {
     font-family: $font-family-serif ; 
@@ -730,7 +720,8 @@ body:not(.front) {
 
 .region-footer-top-center,
 .footer-logo-wrap {
-  margin: 40px 0;
+  margin: 40px auto;
+  text-align: center;
 	img {
 		width: 190px;
 		height: auto;
@@ -761,20 +752,6 @@ ul.menu.footer-links {
     }
   }
 }
-#block-menu-menu-meta-menu-nmse,
-#block-menu-menu-nmse-social-links {
-	@include media-breakpoint-up(sm) {
-    float: right;
-  } 
-	ul, li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	li, a{
-		display: inline-block;
-	}
-}
 
 .menu--footer-menu-la .menu {
   //margin: 0 0 (3 * $padding-base-vertical) 0;
@@ -804,7 +781,7 @@ ul.menu.footer-links {
 .menu--social-la .menu {
     //margin: 40px 0 (3 * $padding-base-vertical) 0;
     padding-left: 0;
-    text-align: right;
+    text-align: left;
     li { 
       font-size: 27px; 
       display: inline-block;
@@ -819,7 +796,7 @@ ul.menu.footer-links {
         span {
           transition: all ease .5s;
           &:hover{
-            color: $brand-secondary; 
+            color: $brand-primary; 
           }
         }
       }
