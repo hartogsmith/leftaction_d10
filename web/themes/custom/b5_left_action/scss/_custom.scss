@@ -182,6 +182,7 @@ p:last-child,
 }
 
 /* nav stuff */
+/*
 .navbar-toggle {
   position: relative;
   float: right;
@@ -207,6 +208,8 @@ p:last-child,
     }
   }
 }
+
+
 li a.active#navbar_toggle {
     color: $white;
 }
@@ -226,6 +229,31 @@ li a.active#navbar_toggle {
   }
   
 }
+
+*/
+
+.navbar-toggler {
+  padding: 0;
+  border: none;
+  .fa-solid.fa-bars {
+    font-size: 36px;
+    color: $secondary;
+    transition: all ease .5s;
+    &:hover {
+      color: $white;
+    }
+  }
+  &.collapsed {
+    .fa-solid.fa-bars {
+      color: $white;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+
 .row.open-nav {
     padding-top: 40px;
     max-width: 80%;
