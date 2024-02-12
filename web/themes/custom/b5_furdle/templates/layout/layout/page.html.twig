@@ -24,104 +24,76 @@
 <div class="page-container">
 
 	{# Main #}
+	{% if page.home_hero %}
+		{{ page.home_hero }}
+	{% endif %}
 
-		{% if is_front %}
+	{% if page.interior_hero %}
+		{{ page.interior_hero }}
+	{% endif %}
+	
+	<div id="main_content" role="main" class="main-container-outer js-quickedit-main-content">
 
-			{% if page.home_hero %}
-				{{ page.home_hero }}
+
+		<div class="main-container container" >
+			{# Interior #}
+
+			{# Sidebar First #}
+			{% if page.sidebar_first %}
+				<aside class="col col-sm-6" role="complementary">
+				{{ page.sidebar_first }}
+				</aside>
 			{% endif %}
 
-			{% if page.home_block_1 %}
-				<section class="home-block-1">
-					<div class="inner container">
-						{{ page.home_block_1 }}
-					</div>
-				</section>
+			{# Content #}
+			{%
+			set content_classes = [
+			page.sidebar_first and page.sidebar_second ? 'col col-sm-6',
+			page.sidebar_first and page.sidebar_second is empty ? 'col col-sm-6',
+			page.sidebar_second and page.sidebar_first is empty ? 'col col-sm-9',
+			page.sidebar_first is empty and page.sidebar_second is empty ? 'col col-sm-12'
+			]
+			%}
+			<section{{ content_attributes.addClass(content_classes) }}>
+
+				{# Highlighted #}
+				{% if page.highlighted %}
+				<div class="highlighted">{{ page.highlighted }}</div>
+				
+				{% endif %}
+
+				{# Breadcrumbs #}
+				{% if breadcrumb %}
+				{{ breadcrumb }}
+				
+				{% endif %}
+
+				{# Action Links #}
+				{% if action_links %}
+				<ul class="action-links">{{ action_links }}</ul>
+				{% endif %}
+
+				{# Help #}
+				{% if page.help %}
+				{{ page.help }}       
+				{% endif %}
+
+				{# Non-home Content #}
+				{{ page.content }}
+
+			</section>
+
+
+
+			{# Sidebar Second #}
+			{% if page.sidebar_second %}
+			<aside class="col col-sm-3" role="complementary">
+			{{ page.sidebar_second }}
+			</aside>
 			{% endif %}
-
-			{% if page.home_block_2 %}
-				<section class="home-block-2">
-					<div class="inner container">
-						{{ page.home_block_2 }}
-					</div>
-				</section>
-			{% endif %}	
-
-			{% if page.home_block_3 %}
-				<section class="home-block-3">
-					<div class="inner container">
-						{{ page.home_block_3 }} 
-					</div>
-				</section>
-			{% endif %}
-
-		{% else %}
-			{% if page.interior_hero %}
-				{{ page.interior_hero }}
-			{% endif %}
-			<div id="main_content" role="main" class="main-container-outer js-quickedit-main-content">
-
-
-				<div class="main-container container" >
-					{# Interior #}
-
-					{# Sidebar First #}
-					{% if page.sidebar_first %}
-						<aside class="col col-sm-6" role="complementary">
-						{{ page.sidebar_first }}
-						</aside>
-					{% endif %}
-
-					{# Content #}
-					{%
-					set content_classes = [
-					page.sidebar_first and page.sidebar_second ? 'col col-sm-6',
-					page.sidebar_first and page.sidebar_second is empty ? 'col col-sm-6',
-					page.sidebar_second and page.sidebar_first is empty ? 'col col-sm-9',
-					page.sidebar_first is empty and page.sidebar_second is empty ? 'col col-sm-12'
-					]
-					%}
-					<section{{ content_attributes.addClass(content_classes) }}>
-
-						{# Highlighted #}
-						{% if page.highlighted %}
-						<div class="highlighted">{{ page.highlighted }}</div>
-						
-						{% endif %}
-
-						{# Breadcrumbs #}
-						{% if breadcrumb %}
-						{{ breadcrumb }}
-						
-						{% endif %}
-
-						{# Action Links #}
-						{% if action_links %}
-						<ul class="action-links">{{ action_links }}</ul>
-						{% endif %}
-
-						{# Help #}
-						{% if page.help %}
-						{{ page.help }}       
-						{% endif %}
-
-						{# Non-home Content #}
-						{{ page.content }}
-
-					</section>
-
-
-
-					{# Sidebar Second #}
-					{% if page.sidebar_second %}
-					<aside class="col col-sm-3" role="complementary">
-					{{ page.sidebar_second }}
-					</aside>
-					{% endif %}
-					
-				</div>
-			</div><!-- /main-container -->
-		{% endif %}
+			
+		</div>
+	</div><!-- /main-container -->
 
 	{% if page.after_content %}
 		  <div class="after-content">

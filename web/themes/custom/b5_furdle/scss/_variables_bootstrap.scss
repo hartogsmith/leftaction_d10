@@ -94,29 +94,3 @@ $font-family-sans-serif:  niveau-grotesk, sans-serif !default;
 $font-family-serif:       niveau-grotesk-small-caps, sans-serif  !default;
 
 
-
-
-:root {
-    --white: #FCF9F3;
-    --black: #000000;
-    --green: #889933;
-    --yellow: #EE9922;
-    --red: #CC3300;
-    --dkBrown: #664422;
-    --brown: #AA9988;
-    --ltBrown: #E6D9CC;
-    --ltrBrown: #EEE5DB;
-    --dkBrownRGBA: rgba(102, 68, 34, 0.8);
-    --pageBG: #EEE5DB;
-    --bodyBG: linear-gradient(0deg, #EEE5DB 0%, #FCF9F3 100%);
-    --modalBG: linear-gradient(180deg, #FCF9F3 80.21%, #E6D9CC 100%);
-    --bodyFont: dovetail-mvb, serif;
-    --accentFont: chaloops,sans-serif;
-    --globalTrans: all ease-in .25s;
-    --tileSpacer: 3px;
-    --keySpacer: 4px;
-    --smPad: 10px;
-    --mdPad: 20px;
-    --lgPad: 30px;
-    --maxWidth: 440px;
-}
