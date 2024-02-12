@@ -1859,7 +1859,8 @@ select#country {
     font-style: italic;
   }
 }
-
-.sli-form .sli-input::placeholder {
-  color: $gray-300;;
+.footer-action {
+  input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: $gray-300 !important;
+  }
 }
