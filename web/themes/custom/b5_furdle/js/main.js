@@ -628,7 +628,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let parser = new DOMParser();
                 let htmlDoc = parser.parseFromString(resp,"text/html");
                 let actionLinks = resp;
-                actionLinks = htmlDoc.querySelector('ul#lnk_action_wrap').innerHTML;
+                actionLinks = htmlDoc.querySelector('.view-content .item-list ul').innerHTML;
                 document.getElementById('lnk_action_wrap').innerHTML = actionLinks;
                 liRotator('#lnk_action_wrap');
 
