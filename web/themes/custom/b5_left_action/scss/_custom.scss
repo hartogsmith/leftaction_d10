@@ -701,7 +701,7 @@ body:not(.front) {
 .footer-action,
 .region-footer-action,
 .region-footer-signup {
-  padding: 10px 0 30px; 
+  padding: 0; 
   background-color: $gray; 
   .email-wrapper {
     @include media-breakpoint-up(sm) {
