@@ -44,7 +44,7 @@
 			{% set home_blocks = 12 / home_blocks %}
 			<!--<h1>home_blocks = {{ home_blocks }}</h1>-->
 			<div class="container">
-				<div class="row home-3">
+				<div class="row my-5 home-{{ home_blocks }}">
 					{% if page.home_block_1 %}
 						<section class="home-block-1 col-md-{{ home_blocks }}">
 						<div class="inner">
