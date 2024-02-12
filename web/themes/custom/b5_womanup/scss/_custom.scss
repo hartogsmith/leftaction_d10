@@ -1859,3 +1859,7 @@ select#country {
     font-style: italic;
   }
 }
+
+.sli-form .sli-input::placeholder {
+  color: $gray-300;;
+}
