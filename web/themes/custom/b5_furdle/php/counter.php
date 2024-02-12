@@ -1,6 +1,7 @@
 <?php
     // path to text file
-    $countFilePath = '/var/www/vhosts/furdle.us/httpdocs/game/php/player_count.txt';
+    
+    $countFilePath = '/themes/custom/b5_furdle/php/player_count.txt';
 
     // open text file to read count
     $countFile  = fopen( $countFilePath, 'r' );
