@@ -21,7 +21,7 @@ div#toolbar-administration {
   transition: all ease .5s;
 }
 .navbar-main.bg-t.open, .navbar-main.bg-t.fade-in {
-  background: $primary;
+  background: $gray;
 }
 .navbar-main ul.menu {
   margin-top: calc(2 * $spacer);
