@@ -273,15 +273,13 @@ div#toolbar-administration {
   margin-top: calc(2 * $spacer);
   margin-bottom: calc(2 * $spacer);
   li {
-      margin-bottom: 10px;
-      float: none;
-      font-size: 24px;
+    font-size: 36px;
+    font-weight: 700;
      a {
         color: $white;
-        font-size: 30px;
-        line-height: 1;
-        transition: all ease .5s;
-        text-decoration: none;
+        transition: all 0.5s;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
         &:hover {
           color: $secondary;
           transform: scale(1.12);
@@ -307,6 +305,9 @@ div#toolbar-administration {
         color: $secondary;
       }
     }
+  }
+  &:focus {
+    box-shadow: none !important;
   }
 }
 // ------------------------------------------------------------------------
