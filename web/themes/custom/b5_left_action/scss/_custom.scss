@@ -772,6 +772,20 @@ ul.menu.footer-links {
 }
 
 
+.menu--social-la {
+  @include media-breakpoint-up(sm) {
+    float: right;
+  } 
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li, a{
+    display: inline-block;
+  }
+}
+
 
 // bylines
 span.submitted {
