@@ -344,6 +344,7 @@ ul.menu {
   margin-right: auto; 
   background-color: $gray-lighter;
 	background: linear-gradient(to bottom, $white, $gray-lighter 200px); 
+  
   @include media-breakpoint-down(sm) {
     // padding-top: 60px;
   }
