@@ -1,6 +1,11 @@
 .btn-block {
     display: block;
 }
+.btn-default {
+  color: $white;
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
 .img-responsive {
     @extend .img-fluid;
 }
@@ -712,11 +717,6 @@ body:not(.front) {
     @include media-breakpoint-up(sm) {
       padding-left: 0; 
     }
-  }
-  #submitSignup {
-    color: $white;
-    background-color: $primary !important;
-    border-color: $primary !important;
   }
   input[type="text"]::placeholder, input[type="email"]::placeholder {
     color: $gray-400 !important;
