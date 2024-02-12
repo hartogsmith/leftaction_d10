@@ -22,6 +22,7 @@
 
 .btn-block {
   display: block;
+  width: 100%;
 }
 #submit_button {
   @extend .btn-block;
@@ -268,7 +269,7 @@ div#toolbar-administration {
 .navbar-main.bg-t.open, .navbar-main.bg-t.fade-in {
   background: $primary;
 }
-ul.menu {
+.navbar-main ul.menu {
   margin-top: calc(2 * $spacer);
   margin-bottom: calc(2 * $spacer);
   li {
