@@ -7,7 +7,7 @@
 
 {# Navbar #}
 
-
+{% if page.navigation_left or page.navigation_right %}
 <nav class="navbar navbar-main navbar-dark {% if is_front %}bg-t fixed-top {% else %}bg-primary{% endif %}" aria-label="Branding and navigation">
 	<div class="container">
 		{{ page.navigation_left }}
@@ -20,6 +20,7 @@
 		</div>
 	</div>
 </nav>
+{% endif %}
 
 <div class="page-container">
 
