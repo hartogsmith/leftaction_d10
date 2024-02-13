@@ -61,8 +61,8 @@
 body {
   font-family: var(--bodyFont) !important;
   color: var(--dkBrown) !important;
-  background: var(--bodyBG) !important;
-  background-attachment: fixed !important;
+  background: var(--bodyBG);
+  background-attachment: fixed;
   .main-container {
     padding-top: ($padding-large-vertical) ;
     padding-bottom: ($padding-large-vertical) ;
@@ -72,6 +72,10 @@ body {
       padding-top: 0rem;
       padding-bottom: 0rem;
     }
+  }
+  &[class^="path-gg_"] {
+    background: #fcf9f4 !important;
+    background-attachment: unset;
   }
 }
 
