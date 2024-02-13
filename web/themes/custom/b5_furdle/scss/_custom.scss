@@ -47,8 +47,8 @@
   border-color: $success !important;
   transition: all ease .5s; 
   &:hover {
-    color: darken($success, 20%);
-    border-color: darken($success, 20%);
+    color: darken($success, 20%)!important;
+    border-color: darken($success, 20%)!important;
   }
 }
 .img-responsive {
@@ -241,7 +241,7 @@ figure {
 
 // ------------------------------------------------------------------------
 // BUTTON OVERRIDES
-.btn { 
+.xbtn { 
   // font-family: $font-family-serif; 
   //text-transform: lowercase;
   // padding: 2px 8px;
@@ -261,9 +261,6 @@ figure {
   line-height: 1.67;
   border-radius: 5px;
   &:hover {
-    color: #ffffff;
-    background-color: #414169;
-    border-color: #343453;
     transform: scale(1.02);
   }
 }
