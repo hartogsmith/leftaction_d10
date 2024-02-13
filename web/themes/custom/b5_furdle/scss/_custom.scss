@@ -54,8 +54,8 @@ body {
   background: var(--bodyBG) !important;
   background-attachment: fixed !important;
   .main-container {
-    padding-top: ($padding-large-vertical * 3) ;
-    padding-bottom: ($padding-large-vertical * 3) ;
+    padding-top: ($padding-large-vertical) ;
+    padding-bottom: ($padding-large-vertical) ;
   }
   &.path-game {
     .main-container {
@@ -595,20 +595,6 @@ footer .footer-logo img {
   z-index: 100;
   background: transparent;
 }
-
-// JUMBOTRON - Interior only Overrides - home only above
-#block-interiorherosignup {
-  .txt {
-    // position: relative; // for now making headline appear below image in solid blue below src img 
-  }
-  .container {
-    // padding-bottom: 3vw !important;  
-  }
-}
-.main-container.container {
-  position: relative; 
-}
-
 
 // page content - max line length for legibility on big screens
 $max-width: 40em; // $max-width variable for text and top image
