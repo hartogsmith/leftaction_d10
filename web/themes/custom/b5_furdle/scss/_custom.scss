@@ -73,10 +73,10 @@ body {
       padding-bottom: 0rem;
     }
   }
-  &[class^="path-gg_"] {
-    background: #fcf9f4 !important;
-    background-attachment: unset;
-  }
+}
+body[class^="path-gg_"] {
+  background: #fcf9f4 !important;
+  background-attachment: unset !important;
 }
 
 
