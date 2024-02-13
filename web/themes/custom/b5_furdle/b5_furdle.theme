@@ -13,5 +13,5 @@ function b5_furdle_preprocess_html(&$vars) {
   $internal = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
 
   // Assign it to body class 
-  $vars['attributes']['class'][] = str_replace("/", "", $internal);
+  $vars['attributes']['class'][] = 'path-' . str_replace("/", "", $internal);
 }
