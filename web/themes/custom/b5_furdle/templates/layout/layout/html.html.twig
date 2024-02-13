@@ -27,13 +27,18 @@
   set body_classes = [
     logged_in ? 'user-logged-in',
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    path_info.args ? 'path-' ~ path_info.args,
     node_type ? 'page-node-type-' ~ node_type|clean_class,
     db_offline ? 'db-offline',
+    theme.settings.navbar_position ? 'navbar-is-' ~ theme.settings.navbar_position,
     (b5_body_schema == 'light' ? ' text-dark' : (b5_body_schema == 'dark' ? ' text-light' :  ' ')),
     (b5_body_bg_schema != 'none' ? " bg-#{b5_body_bg_schema}" : ' '),
-    'd-flex flex-column'
+    'd-flex flex-column',
+    current_path ? 'context' ~ current_path|clean_class,
   ]
 %}
+
+
 
 <!DOCTYPE html>
 <html{{ html_attributes }}>
