@@ -1605,7 +1605,7 @@ footer a {
   margin-bottom: var(--lgPad);
 }
 
-#btn_play_again, .btn_play_again {
+#btn_play_again, a.btn_play_again {
   color: var(--white);
   background-color: var(--green);
   font-family: var(--accentFont);
@@ -1613,6 +1613,7 @@ footer a {
   padding: var(--smPad) var(--mdPad);
   border-radius: 10px;
   transition: var(--globalTrans);
+  text-decoration: none;
 }
 
 .img-r { 
