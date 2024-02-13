@@ -380,7 +380,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // add close clicks to all close buttons
-    document.querySelectorAll('.btn-close').forEach(item => {
+    document.querySelectorAll('.btn-closer').forEach(item => {
         item.addEventListener('click', event => {
           let container = item.closest(".overlay-container")
           // modals are toggled by animating opacity, and toggling visibility and z-index
