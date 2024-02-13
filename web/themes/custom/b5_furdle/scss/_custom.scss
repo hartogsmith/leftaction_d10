@@ -406,20 +406,17 @@ div#toolbar-administration {
 
 // ------------------------------------------------------------------------
 // FOOTER
-.footer-action + .main-footer-outer {
-  border-top: 5px solid $white;
-}
 footer.main-footer-outer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: $primary;
   @extend .text-inverse !optional;
-  color: $brand-secondary;
+  color: $white;
   p, ol, ul, li {
     font-weight: 400; 
     font-family: $font-family-sans-serif;
   }
-  .menu--footer-menu-wu .menu {
+  .menu--footer-menu-fu .menu {
     //margin: 0 0 (3 * $padding-base-vertical) 0;
     padding-left: 0;
     li {
@@ -444,7 +441,7 @@ footer.main-footer-outer {
       }
     }
   }
-  .menu--social-wu .menu {
+  .menu--social-fu .menu {
     //margin: 40px 0 (3 * $padding-base-vertical) 0;
     padding-left: 0;
     text-align: right;
