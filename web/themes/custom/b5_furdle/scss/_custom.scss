@@ -412,9 +412,10 @@ footer.main-footer-outer {
   background-color: $primary;
   @extend .text-inverse !optional;
   color: $white;
-  p, ol, ul, li {
+  p, ol, ul, li, a {
     font-weight: 400; 
     font-family: $font-family-sans-serif;
+    color: $white;
   }
   .menu--footer-menu-fu .menu {
     //margin: 0 0 (3 * $padding-base-vertical) 0;
