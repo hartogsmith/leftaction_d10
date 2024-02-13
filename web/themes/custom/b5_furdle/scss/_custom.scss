@@ -41,6 +41,16 @@
     border-color: darken($brand-secondary, 20%);
   }
 }
+.btn-secondary {
+  color: #ffffff;
+  background-color: $success;
+  border-color: $success !important;
+  transition: all ease .5s; 
+  &:hover {
+    color: darken($success, 20%);
+    border-color: darken($success, 20%);
+  }
+}
 .img-responsive {
   @extend .img-fluid;
 }
@@ -1598,7 +1608,7 @@ footer a {
   margin-bottom: var(--lgPad);
 }
 
-#btn_play_again, a.btn.btn-secondary {
+#btn_play_again {
   color: var(--white);
   background-color: var(--green);
   font-family: var(--accentFont);
