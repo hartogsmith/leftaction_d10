@@ -1605,7 +1605,7 @@ footer a {
   margin-bottom: var(--lgPad);
 }
 
-#btn_play_again {
+#btn_play_again, .btn_play_again {
   color: var(--white);
   background-color: var(--green);
   font-family: var(--accentFont);
