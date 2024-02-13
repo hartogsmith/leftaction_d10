@@ -4,3 +4,11 @@
  * @file
  * B5 WomanUp theme file.
  */
+function b5_womanup_preprocess_html(&$vars) {
+  // Get the current path
+  $current_path = \Drupal::service('path.current')->getPath();
+  $internal = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+
+  // Assign it to body class 
+  $vars['attributes']['class'][] = str_replace("/", "", $internal);
+}
