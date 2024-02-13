@@ -545,11 +545,11 @@ footer.main-footer-outer {
 // SITE WIDE BLOCKS
 
 // Logo
-.navbar-header a.logo {
+.navbar-header .navbar-brand a.site-logo {
 	padding-top: $padding-large-vertical; 
   display: inline-block; 	
 	z-index: 10; 
-	.navbar-brand img {
+	 img {
 		//filter: drop-shadow(0 0 8px rgba(0,0,0,0.7)); 
 		width: auto; 
 		height: 70px;    
