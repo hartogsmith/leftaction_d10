@@ -544,9 +544,16 @@ footer.main-footer-outer {
 // ------------------------------------------------------------------------
 // SITE WIDE BLOCKS
 
+.region.region-navigation-left {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 // Logo
 .navbar-brand img {
-  height: 80px;
+  height: 120px;
   margin: 0;
   width: auto;
 }
