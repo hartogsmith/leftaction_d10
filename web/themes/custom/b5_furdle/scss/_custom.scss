@@ -121,8 +121,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 h1 {
-  text-transform: lowercase;
+  text-transform: none;
   text-align: center;
+  color: var(--green);
 }
 
 h2 {
