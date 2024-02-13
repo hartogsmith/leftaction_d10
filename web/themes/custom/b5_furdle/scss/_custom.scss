@@ -53,16 +53,14 @@ body {
   color: var(--dkBrown) !important;
   background: var(--bodyBG) !important;
   background-attachment: fixed !important;
-  &:not(.path-frontpage) {
+  .main-container {
+    padding-top: ($padding-large-vertical * 3) ;
+    padding-bottom: ($padding-large-vertical * 3) ;
+  }
+  &.path-game {
     .main-container {
-      padding-top: ($padding-large-vertical * 3) ;
-      padding-bottom: ($padding-large-vertical * 3) ;
-    }
-    &.path-game {
-      .main-container {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-      }
+      padding-top: 0rem;
+      padding-bottom: 0rem;
     }
   }
 }
