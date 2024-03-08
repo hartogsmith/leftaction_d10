@@ -7,3 +7,6 @@ global-styling:
     js/vocab.js: {}
     js/load.js: {}
     js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
