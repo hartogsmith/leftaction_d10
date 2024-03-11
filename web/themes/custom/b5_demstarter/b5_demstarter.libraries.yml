@@ -1,7 +1,0 @@
-global-styling:
-  css:
-    theme:
-      css/style.css: {}
-  js:
-    js/wow.min.js: {}
-    js/load.js: {}
