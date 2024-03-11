@@ -48,6 +48,9 @@
     <script src="https://kit.fontawesome.com/2d44a08911.js" crossorigin="anonymous"></script>
    </head>
   <body{{ attributes.addClass(body_classes) }}>
+  {% if page.tracking_header %}
+    {{ page.tracking_header }}
+  {% endif %}
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
