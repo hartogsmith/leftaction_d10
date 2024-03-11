@@ -5,8 +5,11 @@
  * CUSTOM
 #}
 
-{# Navbar #}
+{% if page.tracking_header %}
+	{{ page.homtracking_headere_jumbotron }}
+{% endif %}
 
+{# Navbar #}
 {% if page.navigation_left or page.navigation_right %}
 <nav class="navbar navbar-main bg-t" aria-label="Branding and navigation">
 	<div class="container">
