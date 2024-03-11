@@ -47,4 +47,14 @@ var wow = new WOW(
 jQuery(document).ready(function() { // add classes and data-based timing
     //jQuery('navbar-header-left, navbar-header-right').addClass('wow');
     wow.init(); // last!
+    let faq = document.querySelector('.qa');
+    let qs = faq.querySelectorAll('.q');
+    var qs_arr = [...qs]; // converts NodeList to Array
+    qs_arr.forEach(q => {
+        let a = q.nextElementSibling;
+        a.classList.add('hidden');
+        q.addEventListener("click", (event) => {
+            a.classList.toggle('hidden');
+        });
+    });
 });
