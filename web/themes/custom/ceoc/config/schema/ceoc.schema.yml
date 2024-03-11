@@ -1,5 +1,0 @@
-# Schema for the theme setting configuration file of the jones theme.
-
-ceoc.settings:
-  type: theme_settings
-  label: 'ceoc settings'
