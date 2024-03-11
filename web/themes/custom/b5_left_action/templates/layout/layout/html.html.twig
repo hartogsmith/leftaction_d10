@@ -51,6 +51,9 @@
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
     #}
+    {% if page.tracking_header %}
+      {{ page.tracking_header }}
+    {% endif %}
     <div class="visually-hidden-focusable skip-link p-3 container">
       <a href="#main-content" class="p-2">
         {{ 'Skip to main content'|t }}
